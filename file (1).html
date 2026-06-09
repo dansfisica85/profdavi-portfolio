@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Davi Antonino Nunes da Silva</title>
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --bg-grad-1:#eef2f9;
+      --bg-grad-2:#e3e9f5;
+      --panel:#ffffff;
+      --panel-2:#f8fafc;
+      --border:#e2e8f0;
+      --border-2:#dbe2ec;
+      --text:#1e293b;
+      --muted:#64748b;
+      --link:#2563eb;
+      --accent:#7c3aed;
+      --nav-h:62px;
+      --shadow:0 4px 20px rgba(30,41,59,0.06);
+      --shadow-hover:0 10px 30px rgba(30,41,59,0.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-h) + 16px)}
+    body{
+      margin:0;
+      padding:0;
+      font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+      line-height:1.65;
+      background:linear-gradient(135deg, var(--bg) 0%, var(--bg-grad-1) 50%, var(--bg-grad-2) 100%);
+      background-attachment:fixed;
+      color:var(--text);
+    }
+    a{color:var(--link); text-decoration:none; transition:color .2s ease}
+    a:hover{color:var(--accent); text-decoration:underline}
+    img{max-width:100%; height:auto; display:inline-block}
+
+    h1,h2,h3{margin:0 0 14px; letter-spacing:.2px}
+    h2{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:1.55rem;
+      color:#0f172a;
+      position:relative;
+      padding-bottom:10px;
+      margin-top:0;
+    }
+    h2::after{
+      content:"";
+      position:absolute;
+      left:0; bottom:0;
+      width:64px; height:3px;
+      border-radius:3px;
+      background:linear-gradient(90deg, var(--link), var(--accent));
+    }
+    h3{font-size:1.12rem; color:#1e293b}
+
+    /* ===== NAV FIXO ===== */
+    .navbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      height:var(--nav-h);
+      background:rgba(255,255,255,0.85);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border);
+      box-shadow:0 2px 12px rgba(30,41,59,0.05);
+    }
+    .nav-inner{
+      max-width:1180px;
+      margin:0 auto;
+      height:100%;
+      padding:0 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .nav-brand{
+      font-weight:800;
+      font-size:1.05rem;
+      color:#0f172a;
+      white-space:nowrap;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .nav-links{
+      display:flex;
+      gap:6px;
+      flex-wrap:wrap;
+      align-items:center;
+      overflow-x:auto;
+    }
+    .nav-links a{
+      padding:7px 13px;
+      border-radius:9px;
+      font-size:.9rem;
+      font-weight:600;
+      color:#475569;
+      white-space:nowrap;
+      transition:all .2s ease;
+    }
+    .nav-links a:hover{
+      background:#eef2ff;
+      color:var(--link);
+      text-decoration:none;
+      transform:translateY(-1px);
+    }
+    .btn-print{
+      padding:8px 15px;
+      border:none;
+      border-radius:9px;
+      font-weight:700;
+      font-size:.88rem;
+      cursor:pointer;
+      color:#fff;
+      background:linear-gradient(90deg, var(--link), var(--accent));
+      transition:all .22s ease;
+      white-space:nowrap;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+    }
+    .btn-print:hover{
+      transform:translateY(-2px);
+      box-shadow:0 6px 16px rgba(37,99,235,0.35);
+    }
+
+    .container{max-width:1180px; margin:0 auto; padding:28px}
+    .center{text-align:center}
+
+    @keyframes fadeUp{
+      from{opacity:0; transform:translateY(24px)}
+      to{opacity:1; transform:translateY(0)}
+    }
+    @keyframes floatIn{
+      from{opacity:0; transform:scale(.97)}
+      to{opacity:1; transform:scale(1)}
+    }
+    .section{
+      margin:26px 0;
+      padding:28px;
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      animation:fadeUp .6s ease both;
+      transition:box-shadow .3s ease, transform .3s ease;
+    }
+    .section:hover{
+      box-shadow:var(--shadow-hover);
+      transform:translateY(-2px);
+    }
+    .subsection{
+      margin:16px 0 0;
+      padding:18px;
+      background:var(--panel-2);
+      border:1px solid var(--border-2);
+      border-radius:14px;
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+    .subsection:hover{
+      transform:translateY(-3px);
+      box-shadow:0 6px 18px rgba(37,99,235,0.08);
+    }
+
+    details{
+      margin:14px 0;
+      padding:16px 18px;
+      background:var(--panel-2);
+      border:1px solid var(--border-2);
+      border-radius:14px;
+      transition:box-shadow .25s ease;
+      overflow:hidden;
+    }
+    details[open]{box-shadow:0 6px 20px rgba(37,99,235,0.07)}
+    details:hover{box-shadow:0 6px 20px rgba(37,99,235,0.10)}
+    summary{
+      cursor:pointer;
+      font-weight:700;
+      font-size:1.05rem;
+      color:#0f172a;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      padding:2px 0;
+      transition:color .2s ease;
+    }
+    summary:hover{color:var(--link)}
+    summary::-webkit-details-marker{display:none}
+    summary::before{
+      content:"▶";
+      font-size:.7rem;
+      color:var(--link);
+      transition:transform .25s ease;
+      display:inline-block;
+    }
+    details[open] summary::before{transform:rotate(90deg)}
+    details[open] > *:not(summary){animation:floatIn .4s ease both}
+
+    table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      margin-top:14px;
+      border:1px solid var(--border-2);
+      border-radius:12px;
+      overflow:hidden;
+    }
+    th,td{
+      border-bottom:1px solid var(--border-2);
+      padding:12px 14px;
+      vertical-align:middle;
+      text-align:left;
+    }
+    th{
+      background:linear-gradient(90deg, #eef2ff, #f5f3ff);
+      color:#1e293b;
+      font-weight:700;
+    }
+    tr:last-child td{border-bottom:none}
+    tbody tr{transition:background .2s ease}
+    tbody tr:hover{background:#f1f5ff}
+
+    pre, code{
+      background:#0f172a;
+      color:#e2e8f0;
+      border-radius:12px;
+      padding:18px;
+      overflow:auto;
+      white-space:pre-wrap;
+      word-break:break-word;
+      font-family:"Fira Code", "Consolas", monospace;
+      font-size:.92rem;
+      line-height:1.7;
+      border:1px solid #1e293b;
+    }
+
+    ul{margin:8px 0 0 18px; padding:0}
+    li{margin:7px 0}
+
+    .badge-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+      align-items:center;
+    }
+    .badge-row img{transition:transform .2s ease, filter .2s ease}
+    .badge-row img:hover{
+      transform:translateY(-3px) scale(1.05);
+      filter:drop-shadow(0 4px 8px rgba(37,99,235,0.25));
+    }
+
+    .grid-2{display:grid; grid-template-columns:repeat(2, 1fr); gap:18px}
+
+    .muted{color:var(--muted)}
+    .small{font-size:.96rem}
+
+    .project-links{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:center;
+      margin:12px 0 16px;
+    }
+    .project-links a{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:8px 16px;
+      border-radius:10px;
+      font-weight:600;
+      font-size:.92rem;
+      background:#eef2ff;
+      border:1px solid #dbe4ff;
+      transition:all .22s ease;
+    }
+    .project-links a:hover{
+      background:var(--link);
+      color:#fff;
+      text-decoration:none;
+      transform:translateY(-2px);
+      box-shadow:0 6px 16px rgba(37,99,235,0.3);
+    }
+
+    .quote{
+      margin:18px 0 0;
+      padding:16px 20px;
+      border-left:4px solid var(--link);
+      background:linear-gradient(90deg, #eff5ff, #faf9ff);
+      border-radius:10px;
+      color:#334155;
+    }
+
+    .footer-note{
+      text-align:center;
+      margin-top:18px;
+      font-style:italic;
+      font-size:1.05rem;
+      color:#475569;
+    }
+
+    .banner-img{border-radius:18px; box-shadow:var(--shadow)}
+
+    @media (max-width: 900px){
+      .grid-2{grid-template-columns:1fr}
+      .container{padding:14px}
+      .section{padding:20px}
+      h2{font-size:1.3rem}
+      .nav-brand{font-size:.9rem}
+      .nav-links a{padding:6px 9px; font-size:.82rem}
+    }
+
+    /* ===== ESTILOS DE IMPRESSÃO / PDF ===== */
+    @media print{
+      @page{ margin:12mm; }
+      body{
+        background:#fff !important;
+        color:#000;
+        font-size:11pt;
+      }
+      .navbar, .btn-print, .snake-anim{ display:none !important; }
+      .container{ max-width:100%; padding:0; }
+      .section{
+        box-shadow:none !important;
+        border:1px solid #ccc;
+        margin:10px 0;
+        padding:14px;
+        animation:none !important;
+        transform:none !important;
+        break-inside:avoid;
+        page-break-inside:avoid;
+      }
+      .subsection{ box-shadow:none !important; transform:none !important; break-inside:avoid; }
+      details{ box-shadow:none !important; break-inside:avoid; }
+      details:not([open]){ display:block; }
+      details > *{ display:block !important; }
+      summary::before{ content:""; }
+      pre, code{
+        background:#f4f4f4 !important;
+        color:#000 !important;
+        border:1px solid #ddd;
+      }
+      h2{ color:#000; }
+      h2::after{ background:#000; }
+      a{ color:#000; text-decoration:none; }
+      .badge-row img:hover{ transform:none; filter:none; }
+      .banner-img{ box-shadow:none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR FIXA ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span class="nav-brand">💻 Davi A. N. da Silva</span>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#stack">Stack</a>
+        <a href="#skills">Skills</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#formacao">Formação</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <button class="btn-print" onclick="window.print()">🖨️ Imprimir / PDF</button>
+    </div>
+  </nav>
+
+<div class="container">
+
+  <div class="center">
+    <img class="banner-img" width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:2563eb,25:4f46e5,50:7c3aed,75:9333ea,100:c026d3&height=240&section=header&text=Davi%20Antonino%20Nunes%20da%20Silva&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=32&desc=🚀%20Desenvolvedor%20Full%20Stack%20%7C%20Educador%20%7C%20Inovador&descSize=18&descAlignY=56&descColor=E0E7FF" alt="banner" />
+  </div>
+
+  <div class="center" style="margin-top:20px">
+    <a href="https://github.com/dansfisica85">
+      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=2563EB&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=80&lines=%F0%9F%92%BB+Full+Stack+Developer+%7C+Angular+%C2%B7+Node.js+%C2%B7+Next.js;%F0%9F%8E%93+Engenharia+de+Software+FIAP+%7C+ADS+Anhanguera;%F0%9F%A4%96+EdTech+%C2%B7+AgroTech+%C2%B7+IA+%C2%B7+Data+Analytics" alt="Typing SVG" />
+    </a>
+  </div>
+
+  <div class="center badge-row" style="margin-top:18px">
+    <img src="https://komarev.com/ghpvc/?username=dansfisica85&label=👁️+Visitas+ao+Perfil&color=2563eb&style=for-the-badge" alt="profile views" />
+    <img src="https://img.shields.io/github/followers/dansfisica85?label=Seguidores&style=for-the-badge&color=7c3aed&logo=github" alt="followers" />
+    <img src="https://img.shields.io/badge/🎓+140_Cursos-Alura%20%7C%20DIO%20%7C%20Microsoft%20%7C%20FIAP-16a34a?style=for-the-badge" alt="cursos" />
+  </div>
+
+  <div class="section" id="sobre">
+    <h2>👤 Sobre Mim</h2>
+    <pre>🧑‍💻 Nome:         Davi Antonino Nunes da Silva
+💻 Atuação:      Desenvolvedor WEB Full Stack
+🎓 Formação:     Analista e Desenvolvedor de Software — Anhanguera-SP
+📚 Cursando:     Engenharia de Software — FIAP (2026–2029)
+📜 Extensão:     +140 cursos livres (Alura, DIO, Microsoft, FIAP)
+🎯 Foco:         EdTech · AgroTech · Análise de Dados · IA
+🏗️ Perfil:       Desenvolvedor Full Stack com projetos reais em produção
+🌐 Idiomas:      Português (Nativo) · Inglês · Italiano · Espanhol · Francês
+💡 Lema:         "Quando ideias ganham propósito, elas transformam realidades."
+📍 Localização:  Sertãozinho - SP, Brasil</pre>
+
+    <div class="quote small">
+      Desenvolvedor full-stack com formação multidisciplinar em Física, Matemática, Pedagogia e Engenharia de Software. Mais de <b>140 repositórios</b> no GitHub, com projetos completos, documentados e publicados em produção. Experiência real em criar plataformas educacionais, sistemas de análise de dados e soluções com IA — sempre com foco na transformação digital da educação e do agronegócio.
+    </div>
+  </div>
+
+  <div class="section" id="stack">
+    <h2>🛠️ Tech Stack — Full Stack Developer</h2>
+
+    <details open>
+      <summary>🎨 Frontend</summary>
+      <div class="subsection">
+        <div class="badge-row">
+          <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular"/>
+          <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
+          <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+          <img src="https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white" alt="Svelte"/>
+          <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+          <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+          <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+          <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="TailwindCSS"/>
+          <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
+          <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Chart.js"/>
+          <img src="https://img.shields.io/badge/Monaco_Editor-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Monaco Editor"/>
+        </div>
+      </div>
+    </details>
+
+    <details open>
+      <summary>⚙️ Backend & Banco de Dados</summary>
+      <div class="subsection">
+        <div class="badge-row">
+          <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+          <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express"/>
+          <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+          <img src="https://img.shields.io/badge/API_REST-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="API REST"/>
+          <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite"/>
+          <img src="https://img.shields.io/badge/Turso_/_libSQL-4FF8D2?style=for-the-badge&logo=turso&logoColor=black" alt="Turso"/>
+          <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT"/>
+          <img src="https://img.shields.io/badge/bcrypt-004880?style=for-the-badge&logo=letsencrypt&logoColor=white" alt="bcrypt"/>
+        </div>
+      </div>
+    </details>
+
+    <details open>
+      <summary>🤖 IA, Dados & Automação</summary>
+      <div class="subsection">
+        <div class="badge-row">
+          <img src="https://img.shields.io/badge/Google_Gemini-886FBF?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Gemini"/>
+          <img src="https://img.shields.io/badge/RAG_/_Busca_Semântica-FF6F00?style=for-the-badge&logo=elasticsearch&logoColor=white" alt="RAG"/>
+          <img src="https://img.shields.io/badge/OCR_Tesseract.js-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="OCR"/>
+          <img src="https://img.shields.io/badge/Pyodide-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Pyodide"/>
+          <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter"/>
+          <img src="https://img.shields.io/badge/Monte_Carlo-8B5CF6?style=for-the-badge&logo=scipy&logoColor=white" alt="Monte Carlo"/>
+          <img src="https://img.shields.io/badge/PDF_Parse-DC382D?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="PDF"/>
+        </div>
+      </div>
+    </details>
+
+    <details open>
+      <summary>🔧 DevOps & Ferramentas</summary>
+      <div class="subsection">
+        <div class="badge-row">
+          <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+          <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+          <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"/>
+          <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="npm"/>
+          <img src="https://img.shields.io/badge/Angular_CLI-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular CLI"/>
+          <img src="https://img.shields.io/badge/esbuild-FFCF00?style=for-the-badge&logo=esbuild&logoColor=black" alt="esbuild"/>
+          <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
+          <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code"/>
+        </div>
+      </div>
+    </details>
+
+    <details open>
+      <summary>🖥️ Hardware & Infraestrutura</summary>
+      <div class="subsection">
+        <div class="badge-row">
+          <img src="https://img.shields.io/badge/Montagem_de_PCs-0078D4?style=for-the-badge&logo=windows11&logoColor=white" alt="Montagem"/>
+          <img src="https://img.shields.io/badge/Manutenção_Hardware-555555?style=for-the-badge&logo=dell&logoColor=white" alt="Manutenção"/>
+          <img src="https://img.shields.io/badge/Formatação_/_SO-00ADEF?style=for-the-badge&logo=windows&logoColor=white" alt="Formatação"/>
+          <img src="https://img.shields.io/badge/Upgrade_Componentes-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="Upgrade"/>
+          <img src="https://img.shields.io/badge/Diagnóstico_/_Reparo-ED1C24?style=for-the-badge&logo=ifixit&logoColor=white" alt="Diagnóstico"/>
+          <img src="https://img.shields.io/badge/Redes_/_Infraestrutura-0078D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Redes"/>
+          <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
+          <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows"/>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="section" id="skills">
+    <h2>💪 Habilidades Full Stack</h2>
+    <div class="grid-2">
+      <div class="subsection">
+        <h3>🖥️ Frontend</h3>
+        <ul>
+          <li>SPAs com <b>Angular 21</b>, Signals & componentes standalone</li>
+          <li>Aplicações <b>Next.js 14</b> com SSR e TypeScript</li>
+          <li>Dashboards interativos com <b>Chart.js</b> & Canvas 2D</li>
+          <li>Interfaces responsivas com <b>Bootstrap</b> & <b>Tailwind CSS</b></li>
+          <li>IDE web no navegador com <b>Monaco Editor</b></li>
+          <li>Execução de Python client-side com <b>Pyodide</b></li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <h3>🔧 Backend</h3>
+        <ul>
+          <li>APIs REST com <b>Node.js</b> & <b>Express 5</b></li>
+          <li>Autenticação <b>JWT</b> + <b>bcrypt</b> + controle por papéis</li>
+          <li>Banco de dados <b>SQLite</b> / <b>Turso (libSQL)</b></li>
+          <li>Migrations, seeds e variáveis de ambiente</li>
+          <li>Deploy serverless na <b>Vercel</b></li>
+          <li>Integração com <b>Google Gemini</b> (IA generativa)</li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <h3>📊 Dados & IA</h3>
+        <ul>
+          <li>Análise estatística com <b>Simulação de Monte Carlo</b></li>
+          <li><b>RAG</b> — Retrieval-Augmented Generation</li>
+          <li><b>OCR</b> com Tesseract.js para extração de texto</li>
+          <li>Processamento de PDFs, planilhas e dados estruturados</li>
+          <li>KPIs, rankings e comparativos educacionais</li>
+          <li>Intervalos de confiança & Box-Muller</li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <h3>🔐 Segurança & Arquitetura</h3>
+        <ul>
+          <li>Controle de acesso: <b>Admin · Coordenador · Aluno</b></li>
+          <li>Middleware de autenticação e autorização</li>
+          <li>Sessão persistente (LocalStorage / Cookies)</li>
+          <li>Deploy contínuo e CI/CD via <b>Vercel</b></li>
+          <li>Documentação técnica com <b>Mermaid</b></li>
+          <li>Versionamento com <b>Git</b> & <b>GitHub</b></li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <h3>🖥️ Hardware & Infraestrutura</h3>
+        <ul>
+          <li><b>Montagem</b> e configuração completa de computadores</li>
+          <li><b>Manutenção preventiva e corretiva</b> de hardware</li>
+          <li>Diagnóstico e <b>recuperação</b> de componentes</li>
+          <li><b>Upgrade</b> de memória, SSD, GPU, CPU e periféricos</li>
+          <li>Formatação e instalação de <b>Windows / Linux</b></li>
+          <li>Configuração de <b>redes</b> e infraestrutura local</li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <h3>🎓 Educação & Liderança</h3>
+        <ul>
+          <li>Coordenação pedagógica e <b>gestão escolar</b></li>
+          <li>Elaboração de <b>materiais didáticos</b> digitais</li>
+          <li>Formação continuada de <b>educadores</b> em tecnologia</li>
+          <li>Ensino de <b>Programação, Robótica</b> e Inovação</li>
+          <li>Preparação para <b>vestibulares</b> (200+ alunos)</li>
+          <li><b>Gamificação</b> e metodologias ativas de ensino</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="projetos">
+    <h2>🚀 Projetos em Destaque</h2>
+
+    <details open>
+      <summary>🏆 ADS Anhanguera — Plataforma Educacional Full Stack</summary>
+      <div class="project-links">
+        <a href="https://github.com/dansfisica85/adsanhanguera">📂 Repositório</a>
+        <a href="https://ads26-anhanguera.vercel.app">🌐 Live Demo</a>
+      </div>
+      <p>Plataforma educacional <b>full-stack</b> para o curso de ADS da Anhanguera. Autenticação JWT, papéis de usuário, exercícios interativos, avaliação automática, IDE web (Monaco Editor), execução de Python via Pyodide, ranking gamificado, painel administrativo e biblioteca de documentos.</p>
+      <div class="badge-row">
+        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+        <img src="https://img.shields.io/badge/Express_5-000?style=flat-square&logo=express&logoColor=white" alt="Express 5"/>
+        <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite"/>
+        <img src="https://img.shields.io/badge/JWT-000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT"/>
+        <img src="https://img.shields.io/badge/Pyodide-3776AB?style=flat-square&logo=python&logoColor=white" alt="Pyodide"/>
+        <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" alt="Chart.js"/>
+        <img src="https://img.shields.io/badge/Monaco-0078D4?style=flat-square&logo=visualstudiocode&logoColor=white" alt="Monaco"/>
+        <img src="https://img.shields.io/badge/Vercel-000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel"/>
+      </div>
+    </details>
+
+    <details open>
+      <summary>🎯 Escopos 2026 — Plataforma Educacional Angular</summary>
+      <div class="project-links">
+        <a href="https://github.com/dansfisica85/Escopos-2026">📂 Repositório</a>
+        <a href="https://pec-tecnologia-davi.vercel.app">🌐 Live Demo</a>
+      </div>
+      <p>Plataforma web interativa para consulta de escopos e sequências didáticas. <b>Angular 21</b> com Signals, componentes standalone, rotas, filtros em cascata e grande volume de dados educacionais estruturados.</p>
+      <div class="badge-row">
+        <img src="https://img.shields.io/badge/Angular_21-DD0031?style=flat-square&logo=angular&logoColor=white" alt="Angular 21"/>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
+        <img src="https://img.shields.io/badge/RxJS-B7178C?style=flat-square&logo=reactivex&logoColor=white" alt="RxJS"/>
+        <img src="https://img.shields.io/badge/esbuild-FFCF00?style=flat-square&logo=esbuild&logoColor=black" alt="esbuild"/>
+        <img src="https://img.shields.io/badge/Vercel-000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel"/>
+      </div>
+    </details>
+
+    <details open>
+      <summary>🌾 AetherAgri · Gaya-Link — Global Solution FIAP</summary>
+      <div class="project-links">
+        <a href="https://github.com/dansfisica85/aetheragri">📂 Repositório</a>
+        <a href="https://aetheragri.vercel.app">🌐 Live Demo</a>
+      </div>
+      <p>Ecossistema <b>Space-Agri</b> com dados de satélite, hardware IoT e IA aplicada à agricultura. Live Orbit Map, NDVI Heatmap, Climate Forecast, telemetria ao vivo, simulador de risco de pragas e feed de alertas.</p>
+      <div class="badge-row">
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3"/>
+        <img src="https://img.shields.io/badge/Bootstrap_5-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap 5"/>
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+        <img src="https://img.shields.io/badge/Canvas_2D-FF6F00?style=flat-square&logo=html5&logoColor=white" alt="Canvas 2D"/>
+      </div>
+    </details>
+
+    <details>
+      <summary>🤖 SAEB Coordenador — Sistema com IA Generativa</summary>
+      <div class="project-links">
+        <a href="https://github.com/dansfisica85/SAEB---COORDENADOR">📂 Repositório</a>
+        <a href="https://saeb-coordenador-manual.vercel.app">🌐 Live Demo</a>
+      </div>
+      <p>Sistema de pesquisa e consulta de documentos do SAEB com <b>Google Gemini</b>, busca semântica (RAG), OCR, chat com IA e referências a páginas e slides.</p>
+      <div class="badge-row">
+        <img src="https://img.shields.io/badge/Next.js_14-000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js 14"/>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
+        <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
+        <img src="https://img.shields.io/badge/Gemini-886FBF?style=flat-square&logo=googlegemini&logoColor=white" alt="Gemini"/>
+        <img src="https://img.shields.io/badge/Tesseract-4285F4?style=flat-square&logo=google&logoColor=white" alt="Tesseract"/>
+      </div>
+    </details>
+
+    <details>
+      <summary>📊 Análise REGINA — Estatística Educacional (Monte Carlo)</summary>
+      <div class="project-links">
+        <a href="https://github.com/dansfisica85/REGINA---ANUAL">📂 Repositório</a>
+        <a href="https://analise-regina-anual.vercel.app">🌐 Live Demo</a>
+      </div>
+      <p>Análise estatística educacional com <b>Método Monte Carlo</b>, rankings interativos, gráficos comparativos, intervalos de confiança de 95% e dashboard por escola.</p>
+      <div class="badge-row">
+        <img src="https://img.shields.io/badge/Svelte-FF3E00?style=flat-square&logo=svelte&logoColor=white" alt="Svelte"/>
+        <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" alt="Chart.js"/>
+        <img src="https://img.shields.io/badge/Rollup-EC4A3F?style=flat-square&logo=rollupdotjs&logoColor=white" alt="Rollup"/>
+        <img src="https://img.shields.io/badge/Monte_Carlo-8B5CF6?style=flat-square&logo=scipy&logoColor=white" alt="Monte Carlo"/>
+      </div>
+    </details>
+
+    <details>
+      <summary>📋 Sistema REGINA 2025 — Dashboard Super BI</summary>
+      <div class="project-links">
+        <a href="https://github.com/dansfisica85/Analise-REGINA">📂 Repositório</a>
+        <a href="https://analise-regina-read.vercel.app">🌐 Live Demo</a>
+      </div>
+      <p>Sistema completo de análise educacional: dashboard, KPIs dinâmicos, simulador Super BI, análise de 26 escolas, planos de ação automatizados e gráficos interativos.</p>
+      <div class="badge-row">
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
+        <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
+        <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" alt="Chart.js"/>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+        <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter"/>
+      </div>
+    </details>
+
+    <details>
+      <summary>📁 Outros Projetos</summary>
+      <table>
+        <thead>
+          <tr><th>Projeto</th><th>Repositório</th><th>Deploy</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🎓 Portal de Programação e Robótica</td>
+            <td><a href="https://github.com/dansfisica85/Programacao-e-Robotica">Repositório</a></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>🎤 Site Anhanguera — Palestra</td>
+            <td><a href="https://github.com/dansfisica85/Site-Anhaguera---Palestra">Repositório</a></td>
+            <td><a href="https://curriculo-empreender.vercel.app">Live</a></td>
+          </tr>
+          <tr>
+            <td>💼 Juliana — Portfólio</td>
+            <td><a href="https://github.com/dansfisica85/juliana">Repositório</a></td>
+            <td><a href="https://julianabalbino.vercel.app">Live</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+  </div>
+
+  <div class="section" id="experiencia">
+    <h2>💼 Experiência Profissional</h2>
+    <pre>2026-Atual: 🎓 Desenvolvedor WEB - Full Stack
+2026-Atual: 🎓 Professor de Programação e Desenv. de Software
+           : Mediador Pedagógico — Cogna/Anhanguera (ADS)
+2026-Atual: 👨‍🏫 Professor de Física e Matemática
+           : Ensino Médio / Técnico Profissionalizante
+2026      : 📐 Coord. PAEET — Ensino Técnico
+           : Desenvolvimento de Sistemas
+2024-2026 : 🤖 Professor Especialista em Tecnologia
+           : Programação, Robótica e Currículo Digital
+2022-2023 : 💻 Desenvolvedor Web / Java — Freelancer
+2021-2023 : 🏢 Coordenador Gestor Pedagógico de Área
+           : Apoio a 200+ alunos (vestibulares)
+2020      : 📋 PCNP — Coordenador Núcleo Pedagógico
+           : Elaboração de material COPED-SP (PEI)
+2019      : 🎯 Professor Intensivão de Física — Anhanguera
+2017-2020 : 👨‍🏫 Professor de Física e Matemática (Efetivo)
+           : Concurso Público — Estado de São Paulo
+2008-2014 : 🏫 Agente / Gerente de Organização Escolar
+           : Gestão de RH, liderança e administração escolar</pre>
+  </div>
+
+  <div class="section" id="formacao">
+    <h2>🎓 Formação Acadêmica</h2>
+    <table>
+      <thead>
+        <tr><th>Período</th><th>Instituição</th><th>Curso</th><th>Tipo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2026–2029</td><td><b>FIAP</b></td><td>🎯 Engenharia de Software</td><td>Bacharelado (em curso)</td></tr>
+        <tr><td>2022–2024</td><td><b>Anhanguera</b></td><td>💻 Análise e Desenvolvimento de Sistemas</td><td>Tecnólogo</td></tr>
+        <tr><td>2023—2024</td><td><b>UNIFATECIE</b></td><td>🏫 Gestão Escolar</td><td>Pós-Graduação (Lato Sensu)</td></tr>
+        <tr><td>2020–2021</td><td><b>UniFatecie</b></td><td>📚 Pedagogia — Educação Infantil</td><td>Licenciatura</td></tr>
+        <tr><td>2017–2019</td><td><b>UFSCar</b></td><td>📐 Ensino de Matemática no Ensino Médio</td><td>Pós-Graduação (Lato Sensu)</td></tr>
+        <tr><td>2017–2019</td><td><b>São Luís de Jaboticabal</b></td><td>🔬 Ensino de Matemática e Física</td><td>Pós-Graduação (Lato Sensu)</td></tr>
+        <tr><td>2013—2015</td><td><b>UNIMES</b></td><td>🔭 Física</td><td>Licenciatura</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>📜 Certificações & Cursos</h2>
+    <div class="center badge-row">
+      <img src="https://img.shields.io/badge/Alura-0056D2?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHRleHQgeT0iMTgiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IndoaXRlIj7wn5SNPC90ZXh0Pjwvc3ZnPg==" alt="Alura"/>
+      <img src="https://img.shields.io/badge/DIO-000000?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHRleHQgeT0iMTgiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IndoaXRlIj7wn5OJPC90ZXh0Pjwvc3ZnPg==" alt="DIO"/>
+      <img src="https://img.shields.io/badge/Microsoft_Learn-5E5E5E?style=for-the-badge&logo=microsoft&logoColor=white" alt="Microsoft"/>
+      <img src="https://img.shields.io/badge/FIAP-ED145B?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHRleHQgeT0iMTgiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IndoaXRlIj7wn46TPC90ZXh0Pjwvc3ZnPg==" alt="FIAP"/>
+    </div>
+    <p class="center" style="margin-top:14px"><b>+140 cursos livres de extensão</b> em Desenvolvimento Web, IA, Cloud, Dados, Segurança e Design</p>
+  </div>
+
+  <div class="section">
+    <h2>🌍 Idiomas</h2>
+    <div class="center badge-row">
+      <img src="https://img.shields.io/badge/🇧🇷_Português-Nativo-16a34a?style=for-the-badge" alt="Português"/>
+      <img src="https://img.shields.io/badge/🇺🇸_Inglês-Fluente-2563eb?style=for-the-badge" alt="Inglês"/>
+      <img src="https://img.shields.io/badge/🇮🇹_Italiano-Fluente-7c3aed?style=for-the-badge" alt="Italiano"/>
+      <img src="https://img.shields.io/badge/🇪🇸_Espanhol-Profissional-dc2626?style=for-the-badge" alt="Espanhol"/>
+      <img src="https://img.shields.io/badge/🇫🇷_Francês-Intermediário-0891b2?style=for-the-badge" alt="Francês"/>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🌐 Domínios de Atuação</h2>
+    <div class="center badge-row">
+      <img src="https://img.shields.io/badge/🎓_EdTech-2563eb?style=for-the-badge" alt="EdTech"/>
+      <img src="https://img.shields.io/badge/🌾_AgroTech-16a34a?style=for-the-badge" alt="AgroTech"/>
+      <img src="https://img.shields.io/badge/📊_Data_Analytics-ea580c?style=for-the-badge" alt="Data"/>
+      <img src="https://img.shields.io/badge/🤖_Inteligência_Artificial-7c3aed?style=for-the-badge" alt="IA"/>
+      <img src="https://img.shields.io/badge/🏫_Educação_Pública-dc2626?style=for-the-badge" alt="Educação"/>
+      <img src="https://img.shields.io/badge/🤖_Robótica-0891b2?style=for-the-badge" alt="Robótica"/>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📈 GitHub Stats</h2>
+    <div class="center">
+      <img width="49%" src="https://github-readme-stats.vercel.app/api?username=dansfisica85&show_icons=true&theme=default&hide_border=true&bg_color=ffffff&title_color=2563eb&icon_color=7c3aed&text_color=334155&ring_color=2563eb" alt="GitHub Stats"/>
+      <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=dansfisica85&theme=default&hide_border=true&background=ffffff&ring=2563eb&fire=7c3aed&currStreakLabel=2563eb&sideLabels=334155&dates=64748b" alt="GitHub Streak"/>
+    </div>
+    <div class="center" style="margin-top:14px">
+      <img width="55%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=dansfisica85&layout=compact&theme=default&hide_border=true&bg_color=ffffff&title_color=2563eb&text_color=334155&langs_count=10" alt="Top Languages"/>
+    </div>
+    <div class="center" style="margin-top:14px">
+      <img src="https://github-readme-activity-graph.vercel.app/graph?username=dansfisica85&theme=github-light&hide_border=true&bg_color=ffffff&color=2563eb&line=7c3aed&point=16a34a&area=true&area_color=c7d2fe" alt="Activity Graph" width="98%"/>
+    </div>
+    <div class="center" style="margin-top:18px">
+      <img src="https://github-profile-trophy.vercel.app/?username=dansfisica85&theme=flat&no-frame=true&no-bg=true&margin-w=6&column=7" alt="trophies"/>
+    </div>
+  </div>
+
+  <div class="section" id="contato">
+    <h2>📬 Vamos Conectar!</h2>
+    <div class="center badge-row">
+      <a href="https://www.linkedin.com/in/davinunesdasilva">
+        <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+      </a>
+      <a href="mailto:professordavi85@gmail.com">
+        <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
+      </a>
+      <a href="https://github.com/dansfisica85">
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+      </a>
+    </div>
+  </div>
+
+  <div class="center snake-anim" style="margin:26px 0">
+    <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg" alt="Snake animation" width="100%" style="border-radius:12px"/>
+  </div>
+
+  <div class="center">
+    <img class="banner-img" width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:c026d3,25:9333ea,50:7c3aed,75:4f46e5,100:2563eb&height=120&section=footer" alt="footer"/>
+    <p class="footer-note">⚡ "Quando ideias ganham propósito, elas transformam realidades." ⚡</p>
+  </div>
+
+</div>
+</body>
+</html>
