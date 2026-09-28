@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Davi Antonino Nunes da Silva — Currículo Completo</title>
+<title>Davi Nunes | Desenvolvedor Full Stack JavaScript</title>
+<meta name="description" content="Desenvolvedor Full Stack com foco em JavaScript, TypeScript, Node.js e Turso. Projetos educacionais, dashboards, soft skills e experiência aplicada.">
 <style>
   :root{
     --bg:#f5f7fb; --bg-grad-1:#eef2f9; --bg-grad-2:#e3e9f5;
@@ -101,6 +102,30 @@
     .badge-row img:hover{transform:none;filter:none;}
     .banner-img{box-shadow:none;}
   }
+
+  .hero{padding:48px 30px;border:1px solid #dbe4ff;border-radius:20px;background:linear-gradient(120deg,#eff6ff,#faf5ff);margin:0 0 26px;}
+  .hero h1{font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.2;margin:14px 0 20px;}
+  .eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.12em;color:#5b21b6;}
+  .headline{font-size:clamp(1.3rem,3vw,2rem);font-weight:700;line-height:1.4;color:#1e3a8a;}
+  .hero-summary{font-weight:600;color:#475569;}
+  .hero .project-links{justify-content:flex-start;margin-bottom:0;}
+  .section p{max-width:100ch;}
+  .grid-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .subsection{margin-top:0;}
+  .evidence{font-size:.9rem;color:#334155;border-top:1px solid #dbe2ec;padding-top:12px;margin-top:16px;}
+  .project-case{padding:24px;margin:22px 0 30px;border:1px solid #dbe4ff;border-radius:16px;background:#f8fafc;}
+  .project-case h3{font-size:1.35rem;line-height:1.4;margin-top:8px;}
+  .project-case .project-links{justify-content:flex-start;}
+  figure{margin:22px 0 0;}
+  figure img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid #cbd5e1;}
+  figcaption{font-size:.85rem;color:#475569;margin-top:8px;}
+  .other-projects{margin-top:34px;}
+  .navbar{height:auto;min-height:62px;}
+  .nav-inner{min-height:62px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;}
+  .nav-links{flex-wrap:nowrap;max-width:100%;}
+  @media(max-width:900px){.grid-2{grid-template-columns:1fr}.nav-links{order:3;width:100%}.hero{padding:26px 20px}.project-case{padding:18px}.section{padding:18px}html{scroll-padding-top:130px}table{display:block;overflow-x:auto;max-width:100%;}h2{line-height:1.4}.project-links a{max-width:100%;}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+  @media print{.hero{padding:12px;background:white;border:1px solid #ccc}.headline{font-size:16pt}.hero h1{font-size:20pt}.section{break-inside:auto;page-break-inside:auto}.project-case{break-inside:auto}.project-case figure{break-inside:avoid}figure img{max-height:70mm;object-fit:contain}.eyebrow{color:#333}.grid-2{display:block}.subsection{margin-bottom:10px}}
 </style>
 </head>
 <body>
@@ -110,8 +135,8 @@
     <span class="nav-brand">💻 Davi A. N. da Silva</span>
     <div class="nav-links">
       <a href="#sobre">Sobre</a>
-      <a href="#stack">Stack</a>
-      <a href="#skills">Skills</a>
+      <a href="#stack">Hard skills</a>
+      <a href="#skills">Soft skills</a>
       <a href="#projetos">Projetos</a>
       <a href="#experiencia">Experiência</a>
       <a href="#formacao">Formação</a>
@@ -124,237 +149,18 @@
 
 <div class="container">
 
-  <div class="center">
-    <img class="banner-img" width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:2563eb,25:4f46e5,50:7c3aed,75:9333ea,100:c026d3&height=240&section=header&text=Davi%20Antonino%20Nunes%20da%20Silva&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=32&desc=🚀%20Desenvolvedor%20Full%20Stack%20%7C%20Educador%20%7C%20Inovador&descSize=18&descAlignY=56&descColor=E0E7FF" alt="banner" />
-  </div>
-
-  <div class="center" style="margin-top:20px">
-    <a href="https://github.com/dansfisica85">
-      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=2563EB&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=130&lines=%F0%9F%92%BB+Full+Stack+Developer+%7C+Angular+%C2%B7+Node.js+%C2%B7+Next.js;%F0%9F%8E%93+Engenharia+de+Software+FIAP+%7C+ADS+Anhanguera;%F0%9F%A4%96+EdTech+%C2%B7+AgroTech+%C2%B7+IA+%C2%B7+Data+Analytics" alt="Typing SVG" />
-    </a>
-  </div>
-
-  <div class="center badge-row" style="margin-top:18px">
-    <img src="https://komarev.com/ghpvc/?username=dansfisica85&label=👁️+Visitas+ao+Perfil&color=2563eb&style=for-the-badge" alt="profile views" />
-    <img src="https://img.shields.io/github/followers/dansfisica85?label=Seguidores&style=for-the-badge&color=7c3aed&logo=github" alt="followers" />
-    <img src="https://img.shields.io/badge/🎓+140_Cursos-Alura%20%7C%20DIO%20%7C%20Microsoft%20%7C%20FIAP-16a34a?style=for-the-badge" alt="cursos" />
-  </div>
-
-  <!-- ===== SOBRE ===== -->
-  <div class="section" id="sobre">
-    <h2>👤 Sobre Mim</h2>
-    <pre>🧑‍💻 Nome:         Davi Antonino Nunes da Silva
-💻 Atuação:      Desenvolvedor WEB Full Stack
-🎓 Formação:     Analista e Desenvolvedor de Sistemas — Anhanguera-SP
-📚 Cursando:     Engenheiro de Software — FIAP (2026–2029)
-📜 Extensão:     +140 cursos livres (Alura, DIO, Microsoft, FIAP)
-🎯 Foco:         EdTech · AgroTech · Análise de Dados · IA
-🏗️ Perfil:       Desenvolvedor Full Stack com projetos reais em produção
-🌐 Idiomas:      Português (Nativo) · Inglês · Italiano · Espanhol · Francês
-💡 Lema:         "Quando ideias ganham propósito, elas transformam realidades."
-📍 Localização:  Sertãozinho - SP, Brasil</pre>
-    <div class="quote small">
-      Desenvolvedor full-stack com formação multidisciplinar em Física, Matemática, Pedagogia e Engenharia de Software. Mais de <b>140 repositórios</b> no GitHub, com projetos completos, documentados e publicados em produção. Experiência real em criar plataformas educacionais, sistemas de análise de dados e soluções com IA — sempre com foco na transformação digital da educação e do agronegócio.
-    </div>
-  </div>
-
-  <!-- ===== STACK ===== -->
-  <div class="section" id="stack">
-    <h2>🛠️ Tech Stack — Full Stack Developer</h2>
-
-    <details open>
-      <summary>🎨 Frontend</summary>
-      <div class="subsection">
-        <div class="badge-row">
-          <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular"/>
-          <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
-          <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
-          <img src="https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white" alt="Svelte"/>
-          <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
-          <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
-          <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
-          <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="TailwindCSS"/>
-          <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
-          <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Chart.js"/>
-          <img src="https://img.shields.io/badge/Monaco_Editor-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Monaco Editor"/>
-        </div>
-      </div>
-    </details>
-
-    <details open>
-      <summary>⚙️ Backend & Banco de Dados</summary>
-      <div class="subsection">
-        <div class="badge-row">
-          <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
-          <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express"/>
-          <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-          <img src="https://img.shields.io/badge/API_REST-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="API REST"/>
-          <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite"/>
-          <img src="https://img.shields.io/badge/Turso_/_libSQL-4FF8D2?style=for-the-badge&logo=turso&logoColor=black" alt="Turso"/>
-          <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT"/>
-          <img src="https://img.shields.io/badge/bcrypt-004880?style=for-the-badge&logo=letsencrypt&logoColor=white" alt="bcrypt"/>
-          <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/>
-          <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot"/>
-          <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C#"/>
-          <img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET"/>
-          <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server"/>
-          <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle"/>
-          <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS"/>
-          <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++"/>
-        </div>
-      </div>
-    </details>
-
-    <details open>
-      <summary>🤖 IA, Dados & Automação</summary>
-      <div class="subsection">
-        <div class="badge-row">
-          <img src="https://img.shields.io/badge/Google_Gemini-886FBF?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Gemini"/>
-          <img src="https://img.shields.io/badge/Azure_AI-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure AI"/>
-          <img src="https://img.shields.io/badge/RAG_/_Busca_Semântica-FF6F00?style=for-the-badge&logo=elasticsearch&logoColor=white" alt="RAG"/>
-          <img src="https://img.shields.io/badge/OCR_Tesseract.js-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="OCR"/>
-          <img src="https://img.shields.io/badge/Pyodide-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Pyodide"/>
-          <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter"/>
-          <img src="https://img.shields.io/badge/Monte_Carlo-8B5CF6?style=for-the-badge&logo=scipy&logoColor=white" alt="Monte Carlo"/>
-          <img src="https://img.shields.io/badge/PDF_Parse-DC382D?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="PDF"/>
-        </div>
-      </div>
-    </details>
-
-    <details open>
-      <summary>🔧 DevOps & Ferramentas</summary>
-      <div class="subsection">
-        <div class="badge-row">
-          <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
-          <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
-          <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"/>
-          <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="npm"/>
-          <img src="https://img.shields.io/badge/Angular_CLI-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular CLI"/>
-          <img src="https://img.shields.io/badge/esbuild-FFCF00?style=for-the-badge&logo=esbuild&logoColor=black" alt="esbuild"/>
-          <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
-          <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code"/>
-          <img src="https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=androidstudio&logoColor=white" alt="Android Studio"/>
-          <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" alt="Notion"/>
-        </div>
-      </div>
-    </details>
-
-    <details open>
-      <summary>🖥️ Hardware & Infraestrutura</summary>
-      <div class="subsection">
-        <div class="badge-row">
-          <img src="https://img.shields.io/badge/Montagem_de_PCs-0078D4?style=for-the-badge&logo=windows11&logoColor=white" alt="Montagem"/>
-          <img src="https://img.shields.io/badge/Manutenção_Hardware-555555?style=for-the-badge&logo=dell&logoColor=white" alt="Manutenção"/>
-          <img src="https://img.shields.io/badge/Formatação_/_SO-00ADEF?style=for-the-badge&logo=windows&logoColor=white" alt="Formatação"/>
-          <img src="https://img.shields.io/badge/Upgrade_Componentes-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="Upgrade"/>
-          <img src="https://img.shields.io/badge/Diagnóstico_/_Reparo-ED1C24?style=for-the-badge&logo=ifixit&logoColor=white" alt="Diagnóstico"/>
-          <img src="https://img.shields.io/badge/Redes_/_Infraestrutura-0078D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Redes"/>
-          <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
-          <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows"/>
-        </div>
-      </div>
-    </details>
-  </div>
-
-  <!-- ===== SKILLS ===== -->
-  <div class="section" id="skills">
-    <h2>💪 Habilidades Full Stack</h2>
-    <div class="grid-2">
-      <div class="subsection">
-        <h3>🖥️ Frontend</h3>
-        <ul>
-          <li>SPAs com <b>Angular 21</b>, Signals & componentes standalone</li>
-          <li>Aplicações <b>Next.js 14</b> com SSR e TypeScript</li>
-          <li>Dashboards interativos com <b>Chart.js</b> & Canvas 2D</li>
-          <li>Interfaces responsivas com <b>Bootstrap</b> & <b>Tailwind CSS</b></li>
-          <li>IDE web no navegador com <b>Monaco Editor</b></li>
-          <li>Execução de Python client-side com <b>Pyodide</b></li>
-        </ul>
-      </div>
-      <div class="subsection">
-        <h3>🔧 Backend</h3>
-        <ul>
-          <li>APIs REST com <b>Node.js</b> & <b>Express 5</b></li>
-          <li>Autenticação <b>JWT</b> + <b>bcrypt</b> + controle por papéis</li>
-          <li>Banco de dados <b>SQLite</b> / <b>Turso (libSQL)</b></li>
-          <li>Migrations, seeds e variáveis de ambiente</li>
-          <li>Deploy serverless na <b>Vercel</b></li>
-          <li>Integração com <b>Google Gemini</b> (IA generativa)</li>
-          <li>APIs em <b>Java + Spring Boot 3</b> e <b>C# / .NET</b></li>
-        </ul>
-      </div>
-      <div class="subsection">
-        <h3>📊 Dados & IA</h3>
-        <ul>
-          <li>Análise estatística com <b>Simulação de Monte Carlo</b></li>
-          <li><b>RAG</b> — Retrieval-Augmented Generation</li>
-          <li><b>OCR</b> com Tesseract.js para extração de texto</li>
-          <li>Processamento de PDFs, planilhas e dados estruturados</li>
-          <li>KPIs, rankings e comparativos educacionais</li>
-          <li>Intervalos de confiança & Box-Muller</li>
-          <li>Análise de Dados com Python · SQL avançado · Azure ML</li>
-        </ul>
-      </div>
-      <div class="subsection">
-        <h3>🔐 Segurança & Arquitetura</h3>
-        <ul>
-          <li>Controle de acesso: <b>Admin · Coordenador · Aluno</b></li>
-          <li>Middleware de autenticação e autorização</li>
-          <li>Sessão persistente (LocalStorage / Cookies)</li>
-          <li>Deploy contínuo e CI/CD via <b>Vercel</b></li>
-          <li>Documentação técnica com <b>Mermaid</b></li>
-          <li>Versionamento com <b>Git</b> & <b>GitHub</b></li>
-        </ul>
-      </div>
-      <div class="subsection">
-        <h3>🖥️ Hardware & Infraestrutura</h3>
-        <ul>
-          <li><b>Montagem</b> e configuração completa de computadores</li>
-          <li><b>Manutenção preventiva e corretiva</b> de hardware</li>
-          <li>Diagnóstico e <b>recuperação</b> de componentes</li>
-          <li><b>Upgrade</b> de memória, SSD, GPU, CPU e periféricos</li>
-          <li>Formatação e instalação de <b>Windows / Linux</b></li>
-          <li>Configuração de <b>redes</b> e infraestrutura local</li>
-        </ul>
-      </div>
-      <div class="subsection">
-        <h3>🎓 Educação & Liderança</h3>
-        <ul>
-          <li>Coordenação pedagógica e <b>gestão escolar</b></li>
-          <li>Elaboração de <b>materiais didáticos</b> digitais</li>
-          <li>Formação continuada de <b>educadores</b> em tecnologia</li>
-          <li>Ensino de <b>Programação, Robótica</b> e Inovação</li>
-          <li>Preparação para <b>vestibulares</b> (200+ alunos)</li>
-          <li><b>Gamificação</b> e metodologias ativas de ensino</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<header class="hero"><span class="eyebrow">DESENVOLVEDOR WEB FULL STACK · EDUCADOR</span><h1>Davi Antonino Nunes da Silva</h1><p class="headline">JavaScript é meu foco.<br>Transformar necessidades em projetos é o que me move.</p><p class="hero-summary">JavaScript · TypeScript · Node.js · HTML · CSS · Turso · Deploy · Python</p><div class="project-links"><a href="#projetos">Conheça minhas entregas</a><a href="mailto:professordavi85@gmail.com">Vamos conversar</a><a href="https://github.com/dansfisica85">Meu GitHub</a></div></header>
+<section class="section" id="sobre"><h2>O que faço e o que ofereço</h2><p>Sou desenvolvedor web Full Stack com foco no ecossistema JavaScript. Transformo necessidades reais em plataformas educacionais, interfaces interativas, jogos e dashboards, conectando front-end, APIs, banco de dados e publicação na web.</p><p>Meu ponto forte é desenvolver com JavaScript, TypeScript, Node.js, HTML e CSS, trabalhar com Turso e levar uma aplicação até o deploy. Python, análise de dados e raciocínio matemático complementam essa atuação. Quero contribuir com uma equipe de tecnologia, construir novos projetos e continuar aprendendo com desafios reais.</p><p>Atuo também como Professor Mediador no curso de Análise e Desenvolvimento de Sistemas da Anhanguera, em Sertãozinho. Essa vivência aproxima meu desenvolvimento das necessidades dos usuários e fortalece minha comunicação, minha didática e minha capacidade de transformar problemas em soluções utilizáveis.</p></section>
+<section class="section" id="stack"><h2>Hard skills · competência aplicada em projetos</h2><p>Meu principal domínio técnico é o ecossistema JavaScript. Abaixo, apresento o que consigo construir e exemplos de onde aplico essas habilidades.</p><div class="grid-2"><article class="subsection"><h3>JavaScript e interfaces web</h3><p>Desenvolvimento de interfaces, formulários, interações e lógica de aplicação com JavaScript, TypeScript, HTML5 e CSS3. Uso de Angular, React/Next.js e Svelte conforme o projeto, além de componentes reutilizáveis e layouts responsivos.</p><p class="evidence">Aplicação prática: ADS26, Escopos 2026 e Super Furlan Bros.</p></article><article class="subsection"><h3>Node.js, APIs e integrações</h3><p>Criação de serviços com Node.js e Express, rotas e APIs REST, integração entre front-end e back-end, autenticação e controle de acesso por perfis. Conexão de recursos e serviços externos às necessidades da aplicação.</p><p class="evidence">Aplicação prática: serviços e funcionalidades da plataforma ADS26.</p></article><article class="subsection"><h3>Turso, SQL e persistência</h3><p>Uso frequente de Turso/libSQL e SQLite: criação e organização de tabelas, consultas SQL, operações de cadastro, leitura, atualização e exclusão de dados, além de integração do banco com a aplicação.</p><p class="evidence">Aplicação prática: persistência de usuários, respostas e projetos no ADS26.</p></article><article class="subsection"><h3>Git, deploy e manutenção</h3><p>Versionamento com Git/GitHub, organização de dependências, configuração de variáveis de ambiente e publicação na Vercel. Acompanhamento do deploy, investigação de erros e evolução das aplicações depois da entrega.</p><p class="evidence">Aplicação prática: publicação e manutenção dos meus projetos web.</p></article><article class="subsection"><h3>Python, planilhas e análise de dados</h3><p>Conhecimento sólido em Python, facilidade com planilhas, fórmulas, cálculos e pensamento abstrato. Uso desses recursos para análise de dados, scripts e automação, organização de informações e construção de indicadores, comparativos e dashboards.</p><p class="evidence">Aplicação prática: análises educacionais e dashboards dos projetos REGINA.</p></article><article class="subsection"><h3>Hash, criptografia e proteção de dados</h3><p>Conhecimento do algoritmo SHA-256 e de seu uso em verificações de integridade. Interesse em compreender e aplicar técnicas de criptografia de dados, estudando suas finalidades e limitações. Distingo hash, uma função de resumo, de criptografia reversível com chave.</p><p class="evidence">Conhecimento técnico complementar; aprofundamento contínuo em proteção de dados.</p></article><article class="subsection"><h3>IA integrada ao desenvolvimento</h3><p>Facilidade para conectar ferramentas e recursos de IA ao fluxo de programação e integrar assistentes às aplicações. Uso de IA para apoiar pesquisa, implementação, testes, revisão de código, documentação e exploração de soluções.</p><p class="evidence">Aplicação prática: meu fluxo de desenvolvimento e o assistente integrado ao ADS26.</p></article></div></section>
+<section class="section" id="skills"><h2>Soft skills · como trabalho</h2><div class="grid-2"><article class="subsection"><h3>Aprendizado rápido e contínuo</h3><p>Tenho grande facilidade e entusiasmo para aprender. Diante de uma tecnologia ou problema novo, pesquiso, consulto documentação, experimento e aplico o conhecimento em uma solução concreta.</p></article><article class="subsection"><h3>Criatividade na resolução de problemas</h3><p>Exploro alternativas, conecto conhecimentos de áreas diferentes e decomponho desafios em etapas. Mesmo sem uma resposta inicial, consigo começar pela investigação e avançar com hipóteses, protótipos e validação.</p></article><article class="subsection"><h3>Adaptabilidade e atuação sob pressão</h3><p>Adapto-me a mudanças, situações de conflito e desafios. Busco manter clareza, diálogo e organização sob pressão, revendo prioridades e comunicando dificuldades para construir uma solução.</p></article><article class="subsection"><h3>Comunicação interpessoal</h3><p>Explico ideias e decisões técnicas de forma acessível, escuto diferentes perspectivas e procuro alinhar expectativas. Minha experiência como professor fortalece o compartilhamento de conhecimento e o apoio a outras pessoas.</p></article><article class="subsection"><h3>Trabalho em equipe e compromisso com entregas</h3><p>Assumo responsabilidade pela parte que me cabe no projeto e valorizo colaboração, feedback e transparência. Tenho afinidade com a dinâmica Scrum: alinhar tarefas, compartilhar progresso, sinalizar impedimentos e participar das entregas da equipe.</p></article><article class="subsection"><h3>Iniciativa e entusiasmo por tecnologia</h3><p>Tenho muita vontade de participar de equipes de tecnologia, criar projetos novos e ampliar meu repertório. Gosto de transformar curiosidade em experimentação e conhecimento em melhorias úteis para o projeto.</p></article></div></section>
+<section class="section" id="ia"><h2>IA como ferramenta de trabalho</h2><p>Acompanho a evolução das ferramentas de IA e busco utilizar recursos modernos e atualizados, escolhendo a ferramenta de acordo com a tarefa. Integro essas ferramentas ao meu fluxo para otimizar tempo, esclarecer dúvidas, gerar ideias, explorar implementações e apoiar a criação de testes e a revisão de código.</p><p>Uso a IA como ferramenta de trabalho, com análise crítica e responsabilidade técnica. As sugestões passam por revisão e validação: testes, verificação de comportamento e análise de possíveis problemas de segurança fazem parte da entrega. A ferramenta apoia o processo; a decisão e a validação continuam sob minha responsabilidade.</p></section>
+<section class="section" id="estudos"><h2>Outras tecnologias · estudos e experiência inicial</h2><p>C#, .NET, Java, Spring Boot, PHP e C++ fazem parte dos meus estudos e contatos anteriores. Também tenho conhecimentos complementares em SQL Server, Oracle, AWS e Azure. Minha experiência prática varia entre essas tecnologias; elas não representam o mesmo nível de domínio e entrega que tenho no ecossistema JavaScript. Python complementa minhas competências fortes em programação e dados.</p><p>Ainda não apresento projetos robustos nas demais linguagens como minha principal experiência profissional. Quando um projeto exige uma nova tecnologia, estou disposto a estudar, praticar e desenvolver a competência necessária para contribuir com responsabilidade.</p><p>Minha formação multidisciplinar em Física, Matemática e Educação complementa a programação com raciocínio lógico, análise quantitativa e didática.</p></section>
 
   <!-- ===== PROJETOS ===== -->
   <div class="section" id="projetos">
     <h2>🚀 Projetos em Destaque</h2>
 
-    <details open>
-      <summary>🏆 ADS Anhanguera — Plataforma Educacional Full Stack</summary>
-      <div class="project-links">
-        <a href="https://github.com/dansfisica85/adsanhanguera">📂 Repositório</a>
-        <a href="https://ads26-anhanguera.vercel.app">🌐 Live Demo</a>
-      </div>
-      <p>Plataforma educacional <b>full-stack</b> para o curso de ADS da Anhanguera. Autenticação JWT, papéis de usuário, exercícios interativos, avaliação automática, IDE web (Monaco Editor), execução de Python via Pyodide, ranking gamificado, painel administrativo e biblioteca de documentos.</p>
-      <div class="badge-row">
-        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"/>
-        <img src="https://img.shields.io/badge/Express_5-000?style=flat-square&logo=express&logoColor=white" alt="Express 5"/>
-        <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite"/>
-        <img src="https://img.shields.io/badge/JWT-000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT"/>
-        <img src="https://img.shields.io/badge/Pyodide-3776AB?style=flat-square&logo=python&logoColor=white" alt="Pyodide"/>
-        <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" alt="Chart.js"/>
-        <img src="https://img.shields.io/badge/Monaco-0078D4?style=flat-square&logo=visualstudiocode&logoColor=white" alt="Monaco"/>
-        <img src="https://img.shields.io/badge/Vercel-000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel"/>
-      </div>
-    </details>
-
+<article class="project-case"><span class="eyebrow">PROJETO PRINCIPAL</span><h3>ADS26 Anhanguera · plataforma para ensinar e praticar programação</h3><div class="project-links"><a href="https://github.com/dansfisica85/adsanhanguera">Ver código e documentação</a><a href="https://ads26-anhanguera.vercel.app/">Acessar plataforma</a></div><div class="case-copy"><p><b>Contexto:</b> Desenvolvi a plataforma para apoiar minhas aulas no curso de ADS da Anhanguera e a prática de programação dos meus alunos, especialmente JavaScript.</p><p><b>O que construí:</b> Uma aplicação Full Stack com autenticação e perfis de acesso, exercícios, avaliação automática, editor de código no navegador com preview, projetos de alunos, dashboards, biblioteca de materiais e assistente de IA integrado.</p><p><b>Tecnologias aplicadas:</b> JavaScript, HTML, CSS, Node.js, Express, Turso/libSQL, SQL, APIs, Monaco Editor e deploy na Vercel.</p><p><b>O que posso oferecer a uma equipe:</b> Capacidade de transformar uma necessidade de uso em fluxos de interface, serviços, dados persistidos e uma aplicação publicada que pode continuar evoluindo.</p></div><figure><a href="assets/ads26.png"><img src="assets/ads26.png" width="1265" height="712" loading="lazy" alt="ADS26: tela pública de acesso à plataforma. As áreas de alunos e administração exigem autenticação."></a><figcaption>ADS26: tela pública de acesso à plataforma. As áreas de alunos e administração exigem autenticação.</figcaption></figure></article><article class="project-case"><span class="eyebrow">PROJETO PRINCIPAL</span><h3>Super Furlan Bros · questionário educacional gamificado</h3><div class="project-links"><a href="https://github.com/dansfisica85/Super-Furlan-Bros">Ver código e documentação</a></div><div class="case-copy"><p><b>Contexto:</b> Criei um jogo educacional com questionário gamificado inspirado na Hierarquia de Necessidades de Maslow, voltado à escuta e ao acompanhamento de crianças e adolescentes.</p><p><b>O que desenvolvi:</b> Organização de 30 perguntas em cinco níveis, lógica de respostas e pontuação, transições, feedback visual e geração de relatórios descritos no código do projeto.</p><p><b>Finalidade:</b> Apoiar a identificação de possíveis vulnerabilidades a partir das respostas e orientar a atenção de educadores. É um recurso educacional de apoio, sem substituir avaliação humana ou diagnóstico profissional.</p><p><b>Tecnologias aplicadas:</b> HTML, CSS e JavaScript com ES Modules: lógica de aplicação, manipulação da interface, cálculos e estruturação de informações.</p><p><b>O que posso oferecer a uma equipe:</b> Criatividade para transformar uma proposta pedagógica em experiência interativa e capacidade de conectar regras, conteúdo, dados e interface.</p></div><figure><a href="assets/super-furlan-bros.png"><img src="assets/super-furlan-bros.png" width="1265" height="712" loading="lazy" alt="Super Furlan Bros: tela inicial capturada em prévia local do código. Demonstração pública indisponível nesta revisão."></a><figcaption>Super Furlan Bros: tela inicial capturada em prévia local do código. Demonstração pública indisponível nesta revisão.</figcaption></figure></article><h3 class="other-projects">Outras aplicações do meu repertório</h3>
     <details open>
       <summary>🎯 Escopos 2026 — Plataforma Educacional Angular</summary>
       <div class="project-links">
@@ -927,7 +733,7 @@
 
   <!-- ===== GITHUB STATS ===== -->
   <div class="section">
-    <h2>📈 GitHub Stats</h2>
+    <h2>📈 GitHub Stats</h2><p class="small muted">Estatísticas dos repositórios. As competências e os níveis de experiência estão descritos nas seções acima.</p>
     <div class="center">
       <img width="49%" src="https://github-readme-stats.vercel.app/api?username=dansfisica85&show_icons=true&theme=default&hide_border=true&bg_color=ffffff&title_color=2563eb&icon_color=7c3aed&text_color=334155&ring_color=2563eb" alt="GitHub Stats"/>
       <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=dansfisica85&theme=default&hide_border=true&background=ffffff&ring=2563eb&fire=7c3aed&currStreakLabel=2563eb&sideLabels=334155&dates=64748b" alt="GitHub Streak"/>
