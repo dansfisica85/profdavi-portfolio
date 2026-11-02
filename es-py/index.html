@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="es-PY">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Davi Antonino Nunes da Silva — Currículum y portafolio</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --bg-grad-1:#eef2f9; --bg-grad-2:#e3e9f5;
+    --panel:#ffffff; --panel-2:#f8fafc; --border:#e2e8f0; --border-2:#dbe2ec;
+    --text:#1e293b; --muted:#64748b; --link:#2563eb; --accent:#7c3aed;
+    --nav-h:62px; --shadow:0 4px 20px rgba(30,41,59,0.06);
+    --shadow-hover:0 10px 30px rgba(30,41,59,0.12);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-h) + 16px)}
+  body{margin:0;padding:0;font-family:"Segoe UI",Arial,Helvetica,sans-serif;line-height:1.65;
+    background:linear-gradient(135deg,var(--bg) 0%,var(--bg-grad-1) 50%,var(--bg-grad-2) 100%);
+    background-attachment:fixed;color:var(--text);}
+  a{color:var(--link);text-decoration:none;transition:color .2s ease}
+  a:hover{color:var(--accent);text-decoration:underline}
+  img{max-width:100%;height:auto;display:inline-block}
+  h1,h2,h3{margin:0 0 14px;letter-spacing:.2px}
+  h2{display:flex;align-items:center;gap:10px;font-size:1.55rem;color:#0f172a;position:relative;padding-bottom:10px;margin-top:0;}
+  h2::after{content:"";position:absolute;left:0;bottom:0;width:64px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--link),var(--accent));}
+  h3{font-size:1.12rem;color:#1e293b}
+  .navbar{position:sticky;top:0;z-index:1000;height:var(--nav-h);background:rgba(255,255,255,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(30,41,59,0.05);}
+  .nav-inner{max-width:1180px;margin:0 auto;height:100%;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .nav-brand{font-weight:800;font-size:1.05rem;color:#0f172a;white-space:nowrap;display:flex;align-items:center;gap:8px;}
+  .nav-links{display:flex;gap:6px;flex-wrap:wrap;align-items:center;overflow-x:auto;}
+  .nav-links a{padding:7px 13px;border-radius:9px;font-size:.9rem;font-weight:600;color:#475569;white-space:nowrap;transition:all .2s ease;}
+  .nav-links a:hover{background:#eef2ff;color:var(--link);text-decoration:none;transform:translateY(-1px);}
+  .btn-print{padding:8px 15px;border:none;border-radius:9px;font-weight:700;font-size:.88rem;cursor:pointer;color:#fff;background:linear-gradient(90deg,var(--link),var(--accent));transition:all .22s ease;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;}
+  .btn-print:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(37,99,235,0.35);}
+  .container{max-width:1180px;margin:0 auto;padding:28px}
+  .center{text-align:center}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes floatIn{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:scale(1)}}
+  .section{margin:26px 0;padding:28px;background:var(--panel);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);transition:box-shadow .3s ease,transform .3s ease;}
+  .section.is-entering{animation:fadeUp .6s ease backwards;}
+  .section:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px);}
+  .subsection{margin:16px 0 0;padding:18px;background:var(--panel-2);border:1px solid var(--border-2);border-radius:14px;transition:transform .25s ease,box-shadow .25s ease;}
+  .subsection:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(37,99,235,0.08);}
+  details{margin:14px 0;padding:16px 18px;background:var(--panel-2);border:1px solid var(--border-2);border-radius:14px;transition:box-shadow .25s ease;overflow:hidden;}
+  details[open]{box-shadow:0 6px 20px rgba(37,99,235,0.07)}
+  details:hover{box-shadow:0 6px 20px rgba(37,99,235,0.10)}
+  summary{cursor:pointer;font-weight:700;font-size:1.05rem;color:#0f172a;list-style:none;display:flex;align-items:center;gap:8px;padding:2px 0;transition:color .2s ease;}
+  summary:hover{color:var(--link)}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"▶";font-size:.7rem;color:var(--link);transition:transform .25s ease;display:inline-block;}
+  details[open] summary::before{transform:rotate(90deg)}
+  details[open] > *:not(summary){animation:floatIn .4s ease backwards}
+  table{width:100%;border-collapse:separate;border-spacing:0;margin-top:14px;border:1px solid var(--border-2);border-radius:12px;overflow:hidden;}
+  th,td{border-bottom:1px solid var(--border-2);padding:12px 14px;vertical-align:middle;text-align:left;}
+  th{background:linear-gradient(90deg,#eef2ff,#f5f3ff);color:#1e293b;font-weight:700;}
+  tr:last-child td{border-bottom:none}
+  tbody tr{transition:background .2s ease}
+  tbody tr:hover{background:#f1f5ff}
+  pre,code{background:#0f172a;color:#e2e8f0;border-radius:12px;padding:18px;overflow:auto;white-space:pre-wrap;word-break:break-word;font-family:"Fira Code","Consolas",monospace;font-size:.92rem;line-height:1.7;border:1px solid #1e293b;}
+  ul{margin:8px 0 0 18px;padding:0}
+  li{margin:7px 0}
+  .badge-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;}
+  .badge-row img{transition:transform .2s ease,filter .2s ease}
+  .badge-row img:hover{transform:translateY(-3px) scale(1.05);filter:drop-shadow(0 4px 8px rgba(37,99,235,0.25));}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .muted{color:var(--muted)}
+  .small{font-size:.96rem}
+  .project-links{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:12px 0 16px;}
+  .project-links a{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:10px;font-weight:600;font-size:.92rem;background:#eef2ff;border:1px solid #dbe4ff;transition:all .22s ease;}
+  .project-links a:hover{background:var(--link);color:#fff;text-decoration:none;transform:translateY(-2px);box-shadow:0 6px 16px rgba(37,99,235,0.3);}
+  .quote{margin:18px 0 0;padding:16px 20px;border-left:4px solid var(--link);background:linear-gradient(90deg,#eff5ff,#faf9ff);border-radius:10px;color:#334155;}
+  .footer-note{text-align:center;margin-top:18px;font-style:italic;font-size:1.05rem;color:#475569;}
+  .banner-img{border-radius:18px;box-shadow:var(--shadow)}
+  .typing-animation{width:700px;max-width:100%;height:auto;aspect-ratio:700 / 130;display:inline-block;vertical-align:middle;color:var(--link);}
+  .typing-animation text{font-family:"Fira Code","Consolas",monospace;font-size:23px;font-weight:600;fill:currentColor;}
+  @keyframes typeFirst{0%{width:0}25%,100%{width:700px}}
+  @keyframes typeSecond{0%,33.333%{width:0}58.333%,100%{width:700px}}
+  @keyframes typeThird{0%,66.667%{width:0}91.667%,100%{width:700px}}
+  @media (prefers-reduced-motion:no-preference){
+    .typing-first{animation:typeFirst 12s steps(64,end) infinite;}
+    .typing-second{animation:typeSecond 12s steps(56,end) infinite;}
+    .typing-third{animation:typeThird 12s steps(48,end) infinite;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation:none !important;transition:none !important;}
+  }
+  .exp-item{margin:14px 0;padding:18px;background:var(--panel-2);border:1px solid var(--border-2);border-left:4px solid var(--link);border-radius:12px;}
+  .exp-item h3{margin-bottom:6px}
+  .exp-meta{color:var(--muted);font-size:.92rem;margin:2px 0}
+  .exp-tags{margin-top:8px;font-size:.88rem;color:var(--accent);font-weight:600}
+  .cert-count{display:inline-block;background:linear-gradient(90deg,var(--link),var(--accent));color:#fff;padding:6px 14px;border-radius:20px;font-weight:700;font-size:.9rem;margin-bottom:10px}
+  .cred{font-family:"Fira Code",monospace;font-size:.82rem;color:var(--muted);word-break:break-all}
+  @media (max-width:900px){
+    .grid-2{grid-template-columns:1fr}
+    .container{padding:14px}
+    .section{padding:20px}
+    h2{font-size:1.3rem}
+    .nav-brand{font-size:.9rem}
+    .nav-links a{padding:6px 9px;font-size:.82rem}
+  }
+  @media print{
+    @page{margin:12mm;}
+    .typing-animation rect{animation:none !important;}
+    body{background:#fff !important;color:#000;font-size:10pt;}
+    .navbar,.btn-print,.snake-anim{display:none !important;}
+    .container{max-width:100%;padding:0;}
+    .section{box-shadow:none !important;border:1px solid #ccc;margin:10px 0;padding:14px;animation:none !important;transform:none !important;break-inside:avoid;page-break-inside:avoid;}
+    .subsection,.exp-item{box-shadow:none !important;transform:none !important;break-inside:avoid;}
+    details{box-shadow:none !important;break-inside:avoid;}
+    details:not([open]){display:block;}
+    details > *{display:block !important;}
+    summary::before{content:"";}
+    pre,code{background:#f4f4f4 !important;color:#000 !important;border:1px solid #ddd;}
+    h2{color:#000;} h2::after{background:#000;}
+    a{color:#000;text-decoration:none;}
+    .badge-row img:hover{transform:none;filter:none;}
+    .banner-img{box-shadow:none;}
+  }
+</style>
+<link rel="alternate" hreflang="pt-BR" href="https://profdavi-curriculo.vercel.app/">
+<link rel="alternate" hreflang="es-PY" href="https://profdavi-curriculo.vercel.app/es-py/">
+<link rel="alternate" hreflang="x-default" href="https://profdavi-curriculo.vercel.app/">
+<link rel="stylesheet" href="/assets/idiomas.css">
+<link rel="canonical" href="https://profdavi-curriculo.vercel.app/es-py/">
+</head>
+<body>
+
+<nav class="navbar" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <span class="nav-brand">💻 Davi A. N. da Silva</span>
+    <div class="nav-links">
+      <a href="#sobre">Perfil</a>
+      <a href="#stack">Tecnologías</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#projetos">Proyectos</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#formacao">Formación</a>
+      <a href="#certificados">Certificados</a>
+      <a href="#contato">Contacto</a>
+    </div>
+    <div class="locale-switch" role="group" aria-label="Idioma del sitio">
+      <a lang="pt-BR" hreflang="pt-BR" href="/">Português</a>
+      <a lang="es-PY" hreflang="es-PY" href="/es-py/" aria-current="page" title="Español de Paraguay">Español (PY)</a>
+    </div>
+    <button type="button" class="btn-print" onclick="window.print()" aria-label="Imprimir esta página"><span aria-hidden="true">🖨️</span><span class="print-label">Imprimir</span></button>
+  </div>
+</nav>
+
+<div class="container">
+
+  <header class="cv-hero">
+    <p class="cv-hero-label">PORTAFOLIO PROFESIONAL</p>
+    <h1>Davi Antonino Nunes da Silva</h1>
+    <p class="cv-hero-role">Desarrollador Full Stack · Docente</p>
+    <p class="cv-hero-location">Sertãozinho, São Paulo, Brasil</p>
+  </header>
+
+  <div class="center" style="margin-top:20px">
+    <a href="https://github.com/dansfisica85">
+      <svg class="typing-animation" viewBox="0 0 700 130" width="700" height="130" role="img" aria-labelledby="typing-title">
+        <title id="typing-title">💻 Desarrollador Full Stack | Angular · Node.js · Next.js; 🎓 Ingeniería de Software en FIAP | ADS en Anhanguera; 🤖 EdTech · AgroTech · IA · Análisis de datos</title>
+        <defs>
+          <clipPath id="typing-clip-1"><rect class="typing-first" width="700" height="130" /></clipPath>
+          <clipPath id="typing-clip-2"><rect class="typing-second" width="700" height="130" /></clipPath>
+          <clipPath id="typing-clip-3"><rect class="typing-third" width="700" height="130" /></clipPath>
+        </defs>
+        <g text-anchor="middle" aria-hidden="true">
+          <text x="350" y="38" clip-path="url(#typing-clip-1)">💻 Desarrollador Full Stack | Angular · Node.js · Next.js</text>
+          <text x="350" y="68" clip-path="url(#typing-clip-2)">🎓 Ingeniería de Software · FIAP | ADS · Anhanguera</text>
+          <text x="350" y="98" clip-path="url(#typing-clip-3)">🤖 EdTech · AgroTech · IA · Análisis de datos</text>
+        </g>
+      </svg>
+    </a>
+  </div>
+
+  <div class="center badge-row" style="margin-top:18px">
+    <img src="https://komarev.com/ghpvc/?username=dansfisica85&label=👁️+Visitas+al+perfil&color=2563eb&style=for-the-badge" alt="Visitas al perfil" />
+    <img src="https://img.shields.io/github/followers/dansfisica85?label=Seguidores&style=for-the-badge&color=7c3aed&logo=github" alt="Seguidores en GitHub" />
+    <img src="https://img.shields.io/badge/🎓+140_Cursos-Alura%20%7C%20DIO%20%7C%20Microsoft%20%7C%20FIAP-16a34a?style=for-the-badge" alt="cursos" />
+  </div>
+
+  <div class="cv-action">
+    <a class="cv-download" href="/assets/CV_Davi_Nunes_ES_PY.pdf" type="application/pdf" download="CV_Davi_Nunes_ES_PY.pdf">Descargá mi currículum <span aria-hidden="true">↓</span></a>
+    <small>PDF en español · 2 páginas</small>
+  </div>
+  <!-- Perfil -->
+  <div class="section" id="sobre">
+    <h2>👤 Sobre mí</h2>
+    <pre>🧑‍💻 Nombre:       Davi Antonino Nunes da Silva
+💻 Ocupación:    Desarrollador web Full Stack
+🎓 Formación:    Análisis y Desarrollo de Sistemas — Anhanguera, SP
+📚 En curso:     Ingeniería de Software — FIAP (2026–2029)
+📜 Capacitación: Más de 140 cursos (Alura, DIO, Microsoft, FIAP)
+🎯 Áreas:        EdTech · AgroTech · Análisis de datos · IA
+🏗️ Perfil:       Desarrollador Full Stack con proyectos en producción
+🌐 Idiomas:      Portugués, inglés, italiano, español y francés
+💡 Lema:         «Cuando las ideas tienen un propósito, transforman realidades».
+📍 Ubicación:    Sertãozinho, São Paulo, Brasil</pre>
+    <div class="quote small">
+        <p>Soy desarrollador web Full Stack. Creo plataformas educativas, interfaces interactivas, juegos y tableros de indicadores a partir de necesidades reales. Me ocupo de la interfaz, las API, las bases de datos y la publicación en la web.</p>
+
+        <p>En los proyectos de este portafolio trabajo principalmente con JavaScript, TypeScript, Node.js, HTML, CSS y Turso. También manejo Python y me siento cómodo con el análisis de datos, las planillas de cálculo y los cálculos matemáticos. Aprendo otras tecnologías cuando el proyecto lo requiere.</p>
+
+        <p>También soy docente tutor de la carrera de Análisis y Desarrollo de Sistemas en Anhanguera, en Sertãozinho. Trabajar con estudiantes me ayuda a entender las necesidades de los usuarios, explicar decisiones técnicas y diseñar herramientas que les resulten útiles.</p>
+    </div>
+  </div>
+
+  <!-- ===== STACK ===== -->
+  <div class="section" id="stack">
+    <h2>🛠️ Tecnologías y competencias técnicas</h2>
+        <p>Distingo las tecnologías que uso en proyectos de las que estudio. JavaScript y su ecosistema son la base de la mayor parte de mis desarrollos; también me interesa trabajar con otras tecnologías.</p>
+
+
+    <details open>
+      <summary>🎨 Frontend</summary>
+        <p>Desarrollo interfaces, formularios, interacciones y lógica de aplicación con JavaScript, TypeScript, HTML5 y CSS3. Según el proyecto, utilizo Angular, React con Next.js o Svelte. Diseño componentes reutilizables e interfaces adaptables a distintos dispositivos.</p>
+        <p>Proyectos: ADS26, Escopos 2026 y Super Furlan Bros.</p>
+
+      <div class="subsection">
+        <div class="badge-row">
+          <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular"/>
+          <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
+          <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+          <img src="https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white" alt="Svelte"/>
+          <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+          <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+          <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+          <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="TailwindCSS"/>
+          <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
+          <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Chart.js"/>
+          <img src="https://img.shields.io/badge/Monaco_Editor-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Monaco Editor"/>
+        </div>
+      </div>
+    </details>
+
+    <details open>
+      <summary>⚙️ Backend y bases de datos</summary>
+        <p>Desarrollo servicios con Node.js y Express, defino rutas y API REST, e integro el frontend con el backend. Implemento autenticación y control de acceso por roles, e incorporo servicios externos cuando la aplicación los necesita.</p>
+        <p>Trabajo habitualmente con Turso/libSQL y SQLite. Diseño tablas, escribo consultas SQL e implemento altas, consultas, modificaciones y bajas de registros desde la aplicación.</p>
+        <p>Conozco SHA-256 y su uso para comprobar la integridad de los datos. Estudio las aplicaciones y limitaciones del cifrado y distingo entre una función hash, que genera un resumen, y el cifrado reversible con clave.</p>
+        <p>Proyecto: servicios y funcionalidades de la plataforma ADS26.</p>
+
+      <div class="subsection">
+        <div class="badge-row">
+          <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+          <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express"/>
+          <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+          <img src="https://img.shields.io/badge/API_REST-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="API REST"/>
+          <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite"/>
+          <img src="https://img.shields.io/badge/Turso_y_libSQL-4FF8D2?style=for-the-badge&logo=turso&logoColor=black" alt="Turso"/>
+          <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT"/>
+          <img src="https://img.shields.io/badge/bcrypt-004880?style=for-the-badge&logo=letsencrypt&logoColor=white" alt="bcrypt"/>
+        </div>
+      </div>
+    </details>
+
+    <details open>
+      <summary>🤖 IA, datos y automatización</summary>
+        <p>Manejo Python, planillas de cálculo, fórmulas y razonamiento abstracto. Los aplico al análisis de datos y a la automatización: escribo scripts, organizo información y construyo indicadores, comparaciones y tableros.</p>
+        <p>Proyectos: análisis educativos y tableros de la serie REGINA.</p>
+        <p>Sigo la evolución de las herramientas de IA y elijo cada una según la tarea. Las uso para ahorrar tiempo, resolver dudas, explorar ideas de implementación y preparar pruebas y revisiones de código.</p>
+        <p>Reviso y valido las sugerencias de la IA. Pruebo el código, compruebo su comportamiento y reviso posibles fallas de seguridad. La decisión técnica y la responsabilidad por la entrega siguen siendo mías.</p>
+
+      <div class="subsection">
+        <div class="badge-row">
+          <img src="https://img.shields.io/badge/RAG_y_búsqueda_semántica-FF6F00?style=for-the-badge&logo=elasticsearch&logoColor=white" alt="RAG y búsqueda semántica"/>
+          <img src="https://img.shields.io/badge/OCR_Tesseract.js-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="OCR"/>
+          <img src="https://img.shields.io/badge/Pyodide-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Pyodide"/>
+          <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter"/>
+          <img src="https://img.shields.io/badge/Monte_Carlo-8B5CF6?style=for-the-badge&logo=scipy&logoColor=white" alt="Monte Carlo"/>
+          <img src="https://img.shields.io/badge/PDF_Parse-DC382D?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="PDF"/>
+        </div>
+      </div>
+    </details>
+
+    <details open>
+      <summary>🔧 DevOps y herramientas</summary>
+        <p>Uso Git y GitHub para el control de versiones. Organizo dependencias, configuro variables de entorno y publico aplicaciones en Vercel. Después del despliegue, verifico su funcionamiento, investigo errores y continúo mejorándolas.</p>
+        <p>Aplicación práctica: publicación y mantenimiento de mis proyectos web.</p>
+
+      <div class="subsection">
+        <div class="badge-row">
+          <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+          <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+          <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"/>
+          <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="npm"/>
+          <img src="https://img.shields.io/badge/Angular_CLI-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular CLI"/>
+          <img src="https://img.shields.io/badge/esbuild-FFCF00?style=for-the-badge&logo=esbuild&logoColor=black" alt="esbuild"/>
+          <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
+          <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code"/>
+          <img src="https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=androidstudio&logoColor=white" alt="Android Studio"/>
+          <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" alt="Notion"/>
+        </div>
+      </div>
+    </details>
+
+    <details open>
+      <summary>🖥️ Hardware y infraestructura</summary>
+      <div class="subsection">
+        <div class="badge-row">
+          <img src="https://img.shields.io/badge/Armado_de_PCs-0078D4?style=for-the-badge&logo=windows11&logoColor=white" alt="Armado de computadoras"/>
+          <img src="https://img.shields.io/badge/Mantenimiento_de_hardware-555555?style=for-the-badge&logo=dell&logoColor=white" alt="Mantenimiento de hardware"/>
+          <img src="https://img.shields.io/badge/Formateo_y_SO-00ADEF?style=for-the-badge&logo=windows&logoColor=white" alt="Formateo e instalación del sistema operativo"/>
+          <img src="https://img.shields.io/badge/Actualización_de_componentes-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="Actualización de componentes"/>
+          <img src="https://img.shields.io/badge/Diagnóstico_y_reparación-ED1C24?style=for-the-badge&logo=ifixit&logoColor=white" alt="Diagnóstico y reparación"/>
+          <img src="https://img.shields.io/badge/Redes_e_infraestructura-0078D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Redes e infraestructura"/>
+          <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
+          <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows"/>
+        </div>
+      </div>
+    </details>
+    <details open>
+      <summary>📚 Otras tecnologías: estudios y primeras experiencias</summary>
+        <p>También he estudiado C#, .NET, Java, Spring Boot, PHP y C++. En CoopDesk apliqué C# y .NET a una mesa de ayuda con SQL Server. Oracle, AWS y Azure forman parte de mi formación complementaria. Mi experiencia se concentra en el ecosistema JavaScript y también manejo Python. Estoy dispuesto a aprender y aplicar otras tecnologías según lo que necesite el equipo.</p>
+      <div class="subsection"><div class="badge-row">
+          <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/>
+          <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot"/>
+          <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C#"/>
+          <img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET"/>
+          <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server"/>
+          <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle"/>
+          <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS"/>
+          <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++"/>
+      </div></div>
+    </details>
+  </div>
+
+  <!-- ===== SKILLS ===== -->
+  <div class="section" id="skills">
+    <h2>💪 Habilidades profesionales: cómo trabajo</h2>
+    <div class="grid-2">
+      <div class="subsection">
+        <h3>Aprendizaje rápido y continuo</h3>
+        <p>Cuando encuentro una tecnología o un problema nuevo, investigo, consulto la documentación y hago pruebas hasta poder aplicar lo aprendido a un caso concreto.</p>
+      </div>
+      <div class="subsection">
+        <h3>Creatividad para resolver problemas</h3>
+        <p>Exploro alternativas, relaciono conocimientos de distintas áreas y divido los problemas en etapas. Si la respuesta no es evidente, formulo hipótesis, creo prototipos y compruebo qué funciona.</p>
+      </div>
+      <div class="subsection">
+        <h3>Adaptación y trabajo bajo presión</h3>
+        <p>Ante cambios, conflictos o imprevistos, mantengo el diálogo, reviso prioridades y comunico las dificultades para que el equipo pueda tomar decisiones.</p>
+      </div>
+      <div class="subsection">
+        <h3>Comunicación interpersonal</h3>
+        <p>Explico ideas y decisiones técnicas en un lenguaje accesible, escucho otros puntos de vista y aclaro expectativas. La docencia me enseñó a compartir lo que sé y a acompañar el aprendizaje de otras personas.</p>
+      </div>
+      <div class="subsection">
+        <h3>Trabajo en equipo y compromiso con las entregas</h3>
+        <p>Me responsabilizo de las tareas que asumo y valoro la colaboración, la transparencia y las devoluciones del equipo. Me resulta natural la dinámica de Scrum: acordar tareas, compartir avances, señalar obstáculos y participar en las entregas.</p>
+      </div>
+      <div class="subsection">
+        <h3>Iniciativa e interés por la tecnología</h3>
+        <p>Me interesa desarrollar nuevos proyectos con otros profesionales. Disfruto probar ideas y convertir lo que aprendo en mejoras concretas para el producto.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PROJETOS ===== -->
+  <div class="section" id="projetos">
+    <h2>🚀 Proyectos destacados</h2>
+    <details open>
+      <summary>CoopDesk — Mesa de ayuda interna</summary>
+      <div class="project-links"><a href="https://github.com/dansfisica85/CoopDesk">📂 Repositorio</a></div>
+      <p>Desarrollé una mesa de ayuda con clientes web y de escritorio, una API REST en .NET y una base de datos en SQL Server. Cada solicitud conserva su historial y solo admite cambios de estado permitidos según el rol de acceso.</p>
+      <p><b>Tecnologías:</b> C#, .NET, Angular, Windows Forms, SQL Server, autenticación JWT, arquitectura en capas y pruebas unitarias.</p>
+    </details>
+
+    <details open>
+      <summary>🏆 ADS26 Anhanguera — Plataforma educativa Full Stack</summary>
+      <div class="project-links">
+        <a href="https://github.com/dansfisica85/adsanhanguera">📂 Repositorio</a>
+        <a href="https://ads26-anhanguera.vercel.app">🌐 Ver demostración</a>
+      </div>
+        <p>Contexto: desarrollé la plataforma para mis clases de Análisis y Desarrollo de Sistemas en Anhanguera y para que mis estudiantes pudieran practicar programación, especialmente JavaScript.</p>
+        <p>Qué construí: una aplicación Full Stack con autenticación y roles, ejercicios con evaluación automática, un editor de código en el navegador con vista previa, proyectos de estudiantes, tableros, una biblioteca de materiales y un asistente de IA.</p>
+        <p>Tecnologías: JavaScript, HTML, CSS, Node.js, Express, Turso/libSQL, SQL, API y Monaco Editor. Despliegue en Vercel.</p>
+        <p>Qué aporto a un equipo: sé llevar una necesidad del usuario desde el diseño de la interfaz hasta los servicios, la persistencia de los datos y la publicación de una aplicación que puede seguir creciendo.</p>
+      <p class="center"><a href="/assets/ads26.png"><img src="/assets/ads26.png" loading="lazy" alt="ADS26: pantalla pública de acceso. Las secciones de estudiantes y de administración requieren autenticación." /></a></p>
+      <p class="muted small">ADS26: pantalla pública de acceso. Las secciones de estudiantes y de administración requieren autenticación.</p>
+      <div class="badge-row">
+        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+        <img src="https://img.shields.io/badge/Express_5-000?style=flat-square&logo=express&logoColor=white" alt="Express 5"/>
+        <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite"/>
+        <img src="https://img.shields.io/badge/JWT-000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT"/>
+        <img src="https://img.shields.io/badge/Pyodide-3776AB?style=flat-square&logo=python&logoColor=white" alt="Pyodide"/>
+        <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" alt="Chart.js"/>
+        <img src="https://img.shields.io/badge/Monaco-0078D4?style=flat-square&logo=visualstudiocode&logoColor=white" alt="Monaco"/>
+        <img src="https://img.shields.io/badge/Vercel-000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel"/>
+      </div>
+    </details>
+
+    <details open>
+      <summary>🎮 Super Furlan Bros — Cuestionario educativo en formato de juego</summary>
+      <div class="project-links"><a href="https://github.com/dansfisica85/Super-Furlan-Bros">📂 Repositorio</a></div>
+        <p>Contexto: creé un juego educativo basado en la jerarquía de necesidades de Maslow para escuchar y acompañar a niños y adolescentes.</p>
+        <p>Qué desarrollé: organicé 30 preguntas en cinco niveles e implementé el sistema de respuestas y puntuación, las transiciones, la retroalimentación visual y la generación de informes descrita en el código del proyecto.</p>
+        <p>Finalidad: ayudar a los educadores a detectar posibles situaciones de vulnerabilidad a partir de las respuestas. Es un recurso de apoyo educativo; no sustituye la evaluación de una persona ni el diagnóstico profesional.</p>
+        <p>Tecnologías: HTML, CSS y JavaScript con módulos ES para la lógica, la interfaz, los cálculos y la organización de los datos.</p>
+        <p>Qué aporto a un equipo: creatividad para convertir una propuesta pedagógica en una experiencia interactiva y capacidad para conectar reglas, contenidos, datos e interfaz.</p>
+      <p class="center"><a href="/assets/super-furlan-bros.png"><img src="/assets/super-furlan-bros.png" loading="lazy" alt="Super Furlan Bros: pantalla inicial de una versión local del juego. No hay una demostración pública de esta versión." /></a></p>
+      <p class="muted small">Super Furlan Bros: pantalla inicial de una versión local del juego. No hay una demostración pública de esta versión.</p>
+    </details>
+
+    <details open>
+      <summary>🎯 Escopos 2026 — Plataforma educativa en Angular</summary>
+      <div class="project-links">
+        <a href="https://github.com/dansfisica85/Escopos-2026">📂 Repositorio</a>
+        <a href="https://pec-tecnologia-davi.vercel.app">🌐 Ver demostración</a>
+      </div>
+      <p>Aplicación web interactiva para consultar contenidos curriculares y secuencias didácticas. Utiliza <b>Angular 21</b> con Signals, componentes independientes, rutas y filtros en cascada para explorar un volumen considerable de datos educativos estructurados.</p>
+      <div class="badge-row">
+        <img src="https://img.shields.io/badge/Angular_21-DD0031?style=flat-square&logo=angular&logoColor=white" alt="Angular 21"/>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
+        <img src="https://img.shields.io/badge/RxJS-B7178C?style=flat-square&logo=reactivex&logoColor=white" alt="RxJS"/>
+        <img src="https://img.shields.io/badge/esbuild-FFCF00?style=flat-square&logo=esbuild&logoColor=black" alt="esbuild"/>
+        <img src="https://img.shields.io/badge/Vercel-000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel"/>
+      </div>
+    </details>
+
+    <details open>
+      <summary>🌾 AetherAgri · Gaya-Link — Global Solution FIAP</summary>
+      <div class="project-links">
+        <a href="https://github.com/dansfisica85/aetheragri">📂 Repositorio</a>
+        <a href="https://aetheragri.vercel.app">🌐 Ver demostración</a>
+      </div>
+      <p>Ecosistema <b>Space-Agri</b> que integra datos satelitales, dispositivos IoT e IA aplicada a la agricultura. Incluye un mapa orbital, un mapa de calor del índice NDVI, pronóstico climático, telemetría en vivo, un simulador de riesgo de plagas y alertas.</p>
+      <div class="badge-row">
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3"/>
+        <img src="https://img.shields.io/badge/Bootstrap_5-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap 5"/>
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+        <img src="https://img.shields.io/badge/Canvas_2D-FF6F00?style=flat-square&logo=html5&logoColor=white" alt="Canvas 2D"/>
+      </div>
+    </details>
+
+    <details>
+      <summary>🤖 SAEB Coordenador — Consulta de documentos con IA generativa</summary>
+      <div class="project-links">
+        <a href="https://github.com/dansfisica85/SAEB---COORDENADOR">📂 Repositorio</a>
+        <a href="https://saeb-coordenador-manual.vercel.app">🌐 Ver demostración</a>
+      </div>
+      <p>Sistema de búsqueda y consulta de documentos del SAEB con <b>Google Gemini</b>, búsqueda semántica (RAG), OCR, chat con IA y referencias a páginas y diapositivas.</p>
+      <div class="badge-row">
+        <img src="https://img.shields.io/badge/Next.js_14-000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js 14"/>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
+        <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
+        <img src="https://img.shields.io/badge/Tesseract-4285F4?style=flat-square&logo=google&logoColor=white" alt="Tesseract"/>
+      </div>
+    </details>
+
+    <details>
+      <summary>📊 Análise REGINA — Estadística educativa con simulación de Monte Carlo</summary>
+      <div class="project-links">
+        <a href="https://github.com/dansfisica85/REGINA---ANUAL">📂 Repositorio</a>
+        <a href="https://analise-regina-anual.vercel.app">🌐 Ver demostración</a>
+      </div>
+      <p>Análisis estadístico de datos educativos mediante el <b>método de Monte Carlo</b>, con clasificaciones interactivas, gráficos comparativos, intervalos de confianza del 95 % y un tablero por escuela.</p>
+      <div class="badge-row">
+        <img src="https://img.shields.io/badge/Svelte-FF3E00?style=flat-square&logo=svelte&logoColor=white" alt="Svelte"/>
+        <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" alt="Chart.js"/>
+        <img src="https://img.shields.io/badge/Rollup-EC4A3F?style=flat-square&logo=rollupdotjs&logoColor=white" alt="Rollup"/>
+        <img src="https://img.shields.io/badge/Monte_Carlo-8B5CF6?style=flat-square&logo=scipy&logoColor=white" alt="Monte Carlo"/>
+      </div>
+    </details>
+
+    <details>
+      <summary>📋 Sistema REGINA 2025 — Tablero Super BI</summary>
+      <div class="project-links">
+        <a href="https://github.com/dansfisica85/Analise-REGINA">📂 Repositorio</a>
+        <a href="https://analise-regina-read.vercel.app">🌐 Ver demostración</a>
+      </div>
+      <p>Sistema de análisis educativo con indicadores dinámicos, simulador Super BI, análisis de 26 escuelas, planes de acción automatizados y gráficos interactivos.</p>
+      <div class="badge-row">
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
+        <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
+        <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" alt="Chart.js"/>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+        <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter"/>
+      </div>
+    </details>
+
+    <details>
+      <summary>🏎️ Simulador de carreras de Mario Kart (Node.js)</summary>
+      <div class="project-links">
+        <a href="https://github.com/dansfisica85/Mario-Kart-DIO">📂 Repositorio</a>
+      </div>
+      <p>Simulador de carreras de Mario Kart que desarrollé como proyecto de DIO con <b>Node.js</b> y <b>JavaScript</b>. Proyecto terminado.</p>
+      <div class="badge-row">
+        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+      </div>
+    </details>
+
+    <details>
+      <summary>📁 Otros proyectos</summary>
+      <table>
+        <thead>
+          <tr><th>Proyecto</th><th>Repositorio</th><th>Sitio publicado</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🎓 Portal de Programación y Robótica</td>
+            <td><a href="https://github.com/dansfisica85/Programacao-e-Robotica">Repositorio</a></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>🎤 Sitio de la charla en Anhanguera</td>
+            <td><a href="https://github.com/dansfisica85/Site-Anhaguera---Palestra">Repositorio</a></td>
+            <td><a href="https://curriculo-empreender.vercel.app">Ver sitio</a></td>
+          </tr>
+          <tr>
+            <td>💼 Juliana — Portafolio</td>
+            <td><a href="https://github.com/dansfisica85/juliana">Repositorio</a></td>
+            <td><a href="https://julianabalbino.vercel.app">Ver sitio</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+  </div>
+
+  <!-- ===== EXPERIÊNCIA (RESUMO LINHA DO TEMPO) ===== -->
+  <div class="section" id="experiencia">
+    <h2>💼 Experiencia profesional</h2>
+    <pre>2017–actualidad: 💻 Desarrollo web Full Stack aplicado a la educación
+2026–actualidad: 🎓 Docencia en programación y desarrollo de software
+                 Tutor de Análisis y Desarrollo de Sistemas en Cogna/Anhanguera
+2026–actualidad: 👨‍🏫 Docencia de Física y Matemática en educación media y técnica
+2026–actualidad: 📐 Coordinación del PAEET en Desarrollo de Sistemas
+Desde 2024:      🤖 Tecnología educativa, programación, robótica y currículo digital
+2022–2023:       💻 Desarrollo web y Java por cuenta propia
+2021–2023:       🏢 Coordinación pedagógica y preparación para el ingreso universitario
+2020:            📋 Coordinación pedagógica (PCNP) y elaboración de material de Física
+2019:            🎯 Curso intensivo de Física en Anhanguera
+2017–2020:       👨‍🏫 Docencia de Física y Matemática por concurso público en São Paulo
+2008–2014:       🏫 Organización escolar, recursos humanos y administración</pre>
+
+    <h3 style="margin-top:24px">📋 Experiencia por puesto</h3>
+
+    <div class="exp-item">
+      <h3>Docente tutor — Cogna Educação</h3>
+      <p class="exp-meta">Tutor de la carrera superior tecnológica de Análisis y Desarrollo de Sistemas (ADS)</p>
+      <p class="exp-meta">📅 Febrero de 2026 – actualidad · Tiempo completo</p>
+      <p class="exp-meta">📍 Sertãozinho, São Paulo, Brasil · Presencial</p>
+      <p class="small"><b>Sobre la institución:</b> Cogna es una de las mayores organizaciones educativas de Brasil y trabaja en innovación educativa. <br><b>Funciones:</b></p>
+      <ul class="small">
+        <li>Acompañar presencialmente a estudiantes de educación a distancia y facilitar su aprendizaje.</li>
+        <li>Gestionar grupos virtuales, promover la participación y dar seguimiento a cada estudiante.</li>
+        <li>Preparar y adaptar materiales didácticos de acuerdo con la metodología de la carrera.</li>
+        <li>Impartir clases y coordinar reuniones por videoconferencia.</li>
+        <li>Mantener una comunicación clara con estudiantes y con el equipo pedagógico.</li>
+        <li>Atender con empatía a estudiantes con distintas necesidades.</li>
+        <li>Planificar actividades educativas y adaptarlas ante cambios e imprevistos.</li>
+        <li>Aplicar conocimientos de fonoaudiología para acompañar el desarrollo de los estudiantes.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <h3>Desarrollador web Full Stack</h3>
+      <p class="exp-meta">📅 Desde 2023</p>
+      <p class="exp-meta">📍 Sertãozinho, SP</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Coordinador del PAEET — Formación técnica y profesional</h3>
+      <p class="exp-meta">Carrera: Desarrollo de Sistemas — Secretaria da Educação do Estado de São Paulo · Tiempo completo</p>
+      <p class="exp-meta">📅 Febrero de 2026 – actualidad · Presencial</p>
+      <p class="exp-tags">Bibliotecas de JavaScript, JSX (JavaScript XML) y otras 6 competencias</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Profesor especialista en currículo de tecnología educativa, programación y robótica</h3>
+      <p class="exp-meta">Unidade Regional de Ensino de Sertãozinho (Diretoria de Ensino de Sertãozinho) · Tiempo completo</p>
+      <p class="exp-meta">📅 Abril de 2024 – actualidad</p>
+      <p class="exp-meta">📍 Sertãozinho, São Paulo, Brasil · Presencial</p>
+      <p class="small">Profesor especialista en programación y robótica; coordinador del núcleo pedagógico (PCNP) de Tecnología.</p>
+      <p class="exp-tags">Scratch, Microsoft Azure Machine Learning y otras 7 competencias</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Profesor de Física — Colégio Tecno Sert</h3>
+      <p class="exp-meta">Colégio Tecno Sert · Tiempo completo · <a href="https://www.tecnosert.com.br/colegio/">tecnosert.com.br/colegio</a></p>
+      <p class="exp-meta">📅 feb de 2018 – dic de 2025 · 7 años 11 meses</p>
+      <p class="exp-meta">📍 Sertãozinho, São Paulo, Brasil · Presencial</p>
+      <p class="small">Preparación de materiales y clases de Física según el programa, elaboración de evaluaciones, actividades en el aula y atención de consultas.</p>
+      <p class="exp-tags">Análisis, liderazgo de equipos y otras 10 competencias</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Coordinador del equipo docente</h3>
+      <p class="exp-meta">Escola Estadual «Edith Silveira Dalmaso» · Tiempo completo</p>
+      <p class="exp-meta">📅 ene de 2024 – abr de 2024 · 4 meses</p>
+      <p class="exp-meta">📍 Sertãozinho, São Paulo, Brasil · Presencial</p>
+      <p class="exp-tags">Informática, evaluación educativa y otra competencia</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Coordinador pedagógico del área de ciencias exactas</h3>
+      <p class="exp-meta">Programa de Educación Integral — EE «Dr. Antonio Furlan Jr» · Tiempo completo</p>
+      <p class="exp-meta">📅 ene de 2023 – may de 2023 · 5 meses</p>
+      <p class="exp-meta">📍 Sertãozinho, São Paulo, Brasil · Presencial</p>
+      <p class="exp-tags">Resolución de problemas técnicos</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Coordinador de gestión pedagógica</h3>
+      <p class="exp-meta">Escola Estadual Ferrucio Chiaratti · Tiempo completo</p>
+      <p class="exp-meta">📅 ene de 2021 – feb de 2023 · 2 años 2 meses</p>
+      <p class="exp-meta">📍 Sertãozinho, São Paulo, Brasil</p>
+      <p class="small">Acompañé a más de 200 estudiantes en su preparación para el ingreso a destacadas universidades brasileñas y en el desarrollo de sus competencias académicas.</p>
+      <p class="exp-tags">Análisis, gestión de personas y otras 8 competencias</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Profesor — Proyecto de Apoyo a la Tecnología y la Innovación (PROATEC)</h3>
+      <p class="exp-meta">Escola Estadual Professora Nícia Fabíola Zanutto Giraldi · Medio tiempo</p>
+      <p class="exp-meta">📅 jun de 2022 – ene de 2023 · 8 meses</p>
+      <p class="exp-meta">📍 Sertãozinho, São Paulo, Brasil · Presencial</p>
+      <p class="exp-tags">Java, análisis y otras 6 competencias</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Profesor de Física — Escola Estadual «Bruno Pieroni»</h3>
+      <p class="exp-meta">Escola Estadual «Bruno Pieroni» · Medio tiempo</p>
+      <p class="exp-meta">📅 jun de 2022 – ene de 2023 · 8 meses</p>
+      <p class="exp-meta">📍 Sertãozinho, São Paulo, Brasil</p>
+      <p class="exp-tags">Análisis, Matemática y otras 4 competencias</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Desarrollador web y Java por cuenta propia</h3>
+      <p class="exp-meta">Independiente · Aprendiz</p>
+      <p class="exp-meta">📅 jun de 2022 – ene de 2023 · 8 meses</p>
+      <p class="exp-meta">📍 Sertãozinho, São Paulo, Brasil · Remoto</p>
+      <p class="small">Desarrollador en formación, con trabajos por encargo. Material didáctico de Positivo.</p>
+      <p class="exp-tags">Informática y resolución de problemas técnicos</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Profesor de Matemática — Centro Educacional Poetisa Cecília Meireles</h3>
+      <p class="exp-meta">Centro Educacional Poetisa Cecília Meireles · Medio tiempo</p>
+      <p class="exp-meta">📅 ene de 2021 – jul de 2022 · 1 año 7 meses</p>
+      <p class="exp-meta">📍 Pitangueiras, São Paulo, Brasil</p>
+      <p class="small">Preparación de materiales y clases de Matemática, evaluaciones, actividades en el aula y atención de consultas. Material didáctico de Positivo.</p>
+      <p class="exp-tags">Análisis, Matemática y otras 4 competencias</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Experiências Investigativas — Cuaderno del estudiante del estado de São Paulo 2021 (PEI)</h3>
+      <p class="exp-meta">Secretaria da Educação do Estado de São Paulo · Tiempo completo</p>
+      <p class="exp-meta">📅 jun de 2020 – jun de 2021 · 1 año 1 mes</p>
+      <p class="exp-meta">📍 São Paulo, Brasil</p>
+      <p class="small">Como coordinador del núcleo pedagógico de la Dirección Regional de Sertãozinho, integré el equipo COPED de la Secretaría de Educación del Estado de São Paulo. Elaboré el material de Física para la educación media del cuaderno de actividades de investigación de 2021, en el marco del Programa de Educación Integral (PEI).</p>
+      <p class="exp-tags">Análisis, Matemática y otras 3 competencias</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Profesor coordinador del núcleo pedagógico (PCNP)</h3>
+      <p class="exp-meta">Diretoria de Ensino Região de Sertãozinho · Tiempo completo</p>
+      <p class="exp-meta">📅 may de 2020 – dic de 2020 · 8 meses</p>
+      <p class="exp-meta">📍 Sertãozinho, São Paulo, Brasil</p>
+      <p class="exp-tags">Análisis, liderazgo de equipos y otras 6 competencias</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Profesor de Matemática y Física — EE Winston Churchill</h3>
+      <p class="exp-meta">Escola Estadual Winston Churchill · Tiempo completo</p>
+      <p class="exp-meta">📅 mar de 2017 – jun de 2020 · 3 años 4 meses</p>
+      <p class="exp-meta">📍 Sertãozinho, São Paulo, Brasil</p>
+      <p class="exp-tags">Análisis, enseñanza de la matemática y otras 4 competencias</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Profesor de Matemática y Física — EE «Dr. Antônio Furlan Junior»</h3>
+      <p class="exp-meta">Escola Estadual «Dr. Antônio Furlan Junior» · Tiempo completo</p>
+      <p class="exp-meta">📅 abr de 2017 – ene de 2020 · 2 años 10 meses</p>
+      <p class="exp-meta">📍 Sertãozinho, São Paulo, Brasil</p>
+      <p class="small">Preparación de materiales y clases de Matemática, evaluaciones, actividades en el aula y atención de consultas. Material didáctico de Positivo. <b>Cargo permanente obtenido por concurso público del estado de São Paulo.</b> Funciones previstas en el artículo 6 de la Resolución SE 75 del 30/12/2014, modificada por la Resolución SE 65 del 19/12/2016, y en el artículo 73 del Decreto 57.141/2011.</p>
+      <p class="exp-tags">Análisis, enseñanza de la matemática y otras 3 competencias</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Profesor del curso intensivo de Física para el ingreso universitario</h3>
+      <p class="exp-meta">Faculdade Anhanguera · Independiente</p>
+      <p class="exp-meta">📅 ene de 2019 – dic de 2019 · 1 año</p>
+      <p class="exp-meta">📍 Sertãozinho, São Paulo, Brasil</p>
+      <p class="small">Dicté clases, preparé actividades, organicé los contenidos de la materia y atendí las consultas de los estudiantes con dedicación, flexibilidad y buen humor.</p>
+      <p class="exp-tags">Análisis, adaptación y otras 4 competencias</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Profesor de Física — EE «Prof. José Luiz de Siqueira»</h3>
+      <p class="exp-meta">EE «Prof. José Luiz de Siqueira» · Contrato temporal</p>
+      <p class="exp-meta">📅 oct de 2017 – ene de 2018 · 4 meses</p>
+      <p class="exp-meta">📍 Barrinha, São Paulo, Brasil</p>
+      <p class="small">Preparación de materiales y clases de Física según el programa, elaboración de evaluaciones, actividades en el aula y atención de consultas.</p>
+      <p class="exp-tags">Análisis, enseñanza de la física y otras 2 competencias</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Responsable de organización escolar — E.E. «Anselmo Bispo dos Santos»</h3>
+      <p class="exp-meta">E.E. «Anselmo Bispo dos Santos» · Tiempo completo</p>
+      <p class="exp-meta">📅 sept de 2014 – mar de 2017 · 2 años 7 meses</p>
+      <p class="exp-meta">📍 Taiaçu/SP</p>
+      <p class="small">Gestión de recursos humanos, liderazgo de equipos, tareas administrativas, mediación de conflictos y planificación del trabajo. Según el artículo 7 de la Resolución SE 52 del 9/8/2011, el puesto supervisa las actividades previstas en los artículos 3 a 6 y responde por su ejecución. La función exige tomar decisiones y coordinar personas con distintos puntos de vista, también en situaciones de presión.</p>
+      <p class="exp-tags">Análisis, gestión de personas y otras 5 competencias</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Responsable de organización escolar — EE Elysio de Castro</h3>
+      <p class="exp-meta">Escola Estadual Elysio de Castro · Tiempo completo</p>
+      <p class="exp-meta">📅 ene de 2011 – ago de 2014 · 3 años 8 meses</p>
+      <p class="exp-meta">📍 Taquaral, São Paulo, Brasil</p>
+      <p class="exp-tags">Análisis, capacitación y desarrollo de personas</p>
+    </div>
+
+    <div class="exp-item">
+      <h3>Asistente de organización escolar — EE Aurélio Arrobas Martins</h3>
+      <p class="exp-meta">Escola Estadual Aurélio Arrobas Martins · Tiempo completo</p>
+      <p class="exp-meta">📅 may de 2008 – ene de 2011 · 2 años 9 meses</p>
+      <p class="exp-meta">📍 Jaboticabal, São Paulo, Brasil · Presencial</p>
+      <p class="small">Funciones establecidas en la Resolución SE 52 del 9/8/2011.</p>
+      <p class="exp-tags">Análisis, capacitación y desarrollo de personas</p>
+    </div>
+  </div>
+
+  <!-- ===== FORMAÇÃO ===== -->
+  <div class="section" id="formacao">
+    <h2>🎓 Formación académica</h2>
+    <table>
+      <thead>
+        <tr><th>Período</th><th>Institución</th><th>Curso</th><th>Tipo de formación</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Finalización prevista: octubre de 2026</td><td><b>Anhanguera Educacional</b></td><td>📊 MBA en inteligencia de datos aplicada a los negocios</td><td>Posgrado — MBA (en curso según el registro del portafolio)</td></tr>
+        <tr><td>feb 2026 – feb 2029</td><td><b>FIAP</b></td><td>🎯 Ingeniería de Software</td><td>Carrera de grado en Ingeniería (bacharelado brasileño, en curso)</td></tr>
+        <tr><td>jul 2022 – jun 2024</td><td><b>Anhanguera Educacional</b></td><td>💻 Análisis y Desarrollo de Sistemas (CST)</td><td>Título superior brasileño de tecnólogo (finalizado)</td></tr>
+        <tr><td>feb 2024 – jul 2024</td><td><b>Centro Universitário UniFatecie</b></td><td>🏫 Gestión Escolar</td><td>Posgrado brasileño de especialización (finalizado)</td></tr>
+        <tr><td>ago 2020 – ago 2021</td><td><b>Centro Universitário UniFatecie</b></td><td>📚 Pedagogía — Educación inicial</td><td>Licenciatura brasileña de formación docente</td></tr>
+        <tr><td>ene 2017 – dic 2019</td><td><b>UFSCar - Alumni</b></td><td>📐 Enseñanza de la Matemática en la Educación Media</td><td>Posgrado brasileño de especialización (lato sensu)</td></tr>
+        <tr><td>ene 2017 – dic 2019</td><td><b>Faculdade São Luís de Jaboticabal</b></td><td>🔬 Enseñanza de la Matemática y la Física</td><td>Posgrado brasileño de especialización (lato sensu)</td></tr>
+        <tr><td>jun 2013 – ago 2015</td><td><b>Universidade Metropolitana de Santos (UNIMES)</b></td><td>🔭 Física (ciencias exactas)</td><td>Licenciatura plena brasileña de formación docente</td></tr>
+        <tr><td>Noviembre de 2023 – actualidad</td><td><b>DIO</b></td><td>📜 Formación continua: evaluación educativa, AWS CloudFormation y otras 29 competencias</td><td>Formación continua</td></tr>
+        <tr><td>nov 2022 – nov 2023</td><td><b>Alura</b></td><td>📜 Formación continua: pruebas de software, desarrollo de software y otras 14 competencias</td><td>Formación continua</td></tr>
+      </tbody>
+    </table>
+    <p class="small muted" style="margin-top:12px"><b>UNIMES — Actividades y grupos:</b> Laboratorios de programación y electrónica, y práctica docente en el aula. Competencias: preparación para el ingreso universitario, gestión de personas y otras ocho.</p>
+  </div>
+
+  <!-- ===== CERTIFICADOS ===== -->
+  <div class="section" id="certificados">
+    <h2>📜 Certificaciones y licencias</h2>
+    <span class="cert-count">100+ certificados · Alura · DIO · Microsoft · FIAP · UniFatecie · Anhanguera · LinkedIn · Ada</span>
+
+    <div class="center badge-row" style="margin:14px 0">
+      <img src="https://img.shields.io/badge/Alura-0056D2?style=for-the-badge&logoColor=white" alt="Alura"/>
+      <img src="https://img.shields.io/badge/DIO-000000?style=for-the-badge&logoColor=white" alt="DIO"/>
+      <img src="https://img.shields.io/badge/Microsoft_Learn-5E5E5E?style=for-the-badge&logo=microsoft&logoColor=white" alt="Microsoft"/>
+      <img src="https://img.shields.io/badge/FIAP-ED145B?style=for-the-badge&logoColor=white" alt="FIAP"/>
+      <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+    </div>
+
+    <details open>
+      <summary>🏆 2026 · FIAP</summary>
+      <table>
+        <thead><tr><th>Certificado</th><th>Institución</th><th>Fecha</th><th>Credencial y competencias</th></tr></thead>
+        <tbody>
+          <tr><td title="Título original: Comunicação">Comunicación</td><td>FIAP</td><td>feb/2026</td><td><span class="cred">f585c60ed1e0dfd9267e50d00dee4a63</span> · Comunicación</td></tr>
+        </tbody>
+      </table>
+    </details>
+
+    <details>
+      <summary>📅 2024 · DIO · Alura · Microsoft · UniFatecie</summary>
+      <table>
+        <thead><tr><th>Certificado</th><th>Institución</th><th>Fecha</th><th>Credencial y competencias</th></tr></thead>
+        <tbody>
+          <tr><td title="Título original: Simulador de Corridas do Mario Kart com Node.js">Simulador de carreras de Mario Kart con Node.js</td><td>DIO</td><td>oct/2024</td><td><span class="cred">FSUBZBPH</span> · Node.js, JavaScript</td></tr>
+          <tr><td>Android Studio</td><td>DIO</td><td>oct/2024</td><td><span class="cred">T21WHR0M</span> · Android, desarrollo para Android +1</td></tr>
+          <tr><td title="Título original: Inicializando Projetos Node.js">Primeros pasos con proyectos de Node.js</td><td>DIO</td><td>ago/2024</td><td>Node.js</td></tr>
+          <tr><td title="Título original: Pensamento Computacional na Educação Básica">Pensamiento computacional en la educación básica</td><td>Alura</td><td>jul/2024</td><td><span class="cred">5d335385-615a-4fac-8ded-a2ed856b60b4</span></td></tr>
+          <tr><td title="Título original: Instalando Ambiente de Desenvolvimento Node.js">Instalación de un entorno de desarrollo para Node.js</td><td>DIO</td><td>jul/2024</td><td><span class="cred">G2BTY6OM</span> · Node.js</td></tr>
+          <tr><td title="Título original: Bem-vindo ao mundo do NODE.JS">Bienvenida al mundo de Node.js</td><td>DIO</td><td>jul/2024</td><td><span class="cred">NBA04BWX</span> · Node.js</td></tr>
+          <tr><td>Módulo 5 - English4Tech</td><td>DIO</td><td>jul/2024</td><td><span class="cred">NRLDY737</span> · Inglés, inglés para los negocios +1</td></tr>
+          <tr><td title="Título original: Python e APIs: conhecendo a biblioteca Requests">Python y las API: introducción a la biblioteca Requests</td><td>Alura</td><td>jun/2024</td><td><span class="cred">aa7770ef-b1a8-4152-a90a-b79926986585</span></td></tr>
+          <tr><td title="Título original: Listas: criando o seu jogo de cartas com listas e padrões">Listas: creación de un juego de cartas con listas y patrones</td><td>Alura</td><td>jun/2024</td><td><span class="cred">192ad498-d58b-462e-b2fb-5ea6ab1d1170</span> · JavaScript</td></tr>
+          <tr><td title="Título original: Funções: desenvolvendo um recomendador de filmes com JavaScript">Funciones: desarrollo de un recomendador de películas con JavaScript</td><td>Alura</td><td>jun/2024</td><td><span class="cred">493af831-95a8-4b0d-98eb-012860356134</span> · JavaScript</td></tr>
+          <tr><td title="Título original: Bem-Vindo ao Mundo do Node.js">Bienvenida al mundo de Node.js</td><td>DIO</td><td>jun/2024</td><td><span class="cred">NBA04BWX</span> · Node.js</td></tr>
+          <tr><td title="Título original: Aceleração Internacional - Implementing AI for Emotion Detection">Programa internacional: implementación de IA para detectar emociones</td><td>DIO</td><td>jun/2024</td><td><span class="cred">ZGZBTPOH</span></td></tr>
+          <tr><td title="Título original: Aceleração Internacional - Implementing AI for Emotion Detection">Programa internacional: implementación de IA para detectar emociones</td><td>DIO</td><td>jun/2024</td><td><span class="cred">UBO0AQJA</span></td></tr>
+          <tr><td>Technical Evaluation of Created Models and Ethical Issues</td><td>DIO</td><td>jun/2024</td><td><span class="cred">LRUWLXV8</span></td></tr>
+          <tr><td>Hands-On: Implementing AI with Python</td><td>DIO</td><td>jun/2024</td><td><span class="cred">FFJJPYFP</span></td></tr>
+          <tr><td>The Impact of Emotions on Decision-Making</td><td>DIO</td><td>jun/2024</td><td><span class="cred">6ABKDUFT</span> · Toma de decisiones</td></tr>
+          <tr><td title="Título original: Conectando-se ao Mundo Profissional: Tecnologia, Currículo e Entrevista">Ingreso al mundo laboral: tecnología, currículum y entrevista</td><td>Alura</td><td>may/2024</td><td><span class="cred">95d1c773-7289-4d0c-abb4-660663403289</span></td></tr>
+          <tr><td title="Título original: Repositório digital: aprenda a compartilhar seus projetos">Repositorio digital: cómo compartir proyectos</td><td>Alura</td><td>may/2024</td><td><span class="cred">ac527138-b516-432d-8424-b0af56226ae6</span> · GitHub</td></tr>
+          <tr><td title="Título original: Linguagem de programação: criando projetos artísticos com Javascript">Lenguajes de programación: creación de proyectos artísticos con JavaScript</td><td>Alura</td><td>may/2024</td><td><span class="cred">cdc1de01-dda7-4c5d-9d9f-d0801493c6c0</span></td></tr>
+          <tr><td title="Título original: Lógica de programação: desenvolvendo um jogo estilo Pong">Lógica de programación: desarrollo de un juego al estilo de Pong</td><td>Alura</td><td>may/2024</td><td><span class="cred">ab630fdb-40c0-43fc-8653-ef84a8d88514</span></td></tr>
+          <tr><td>Microsoft Certified: Azure AI Fundamentals</td><td>Microsoft</td><td>may/2024</td><td>Microsoft Azure Machine Learning</td></tr>
+          <tr><td>Microsoft Azure AI Fundamentals AI-900</td><td>DIO</td><td>abr/2024</td><td><span class="cred">UKFIVT12</span> · Azure ML</td></tr>
+          <tr><td title="Título original: Explorando os Recursos de IA Generativa com Copilot e OpenAI">Exploración de herramientas de IA generativa con Copilot y OpenAI</td><td>DIO</td><td>abr/2024</td><td><span class="cred">7NQQDCRC</span> · Azure ML</td></tr>
+          <tr><td title="Título original: Fundamentos da IA Generativa">Fundamentos de la IA generativa</td><td>DIO</td><td>abr/2024</td><td><span class="cred">Y0MTYCO9</span> · Azure ML</td></tr>
+          <tr><td title="Título original: Azure Cognitive Search: AI Search para indexação e consulta de Dados">Azure Cognitive Search: indexación y consulta de datos con AI Search</td><td>DIO</td><td>abr/2024</td><td><span class="cred">QGXKR2H1</span> · Azure Functions, Azure ML</td></tr>
+          <tr><td title="Título original: Análise de Sentimentos com Language Studio no Azure AI">Análisis de sentimientos con Language Studio en Azure AI</td><td>DIO</td><td>abr/2024</td><td><span class="cred">ORY1RATD</span> · Azure ML, Azure DevOps Server +3</td></tr>
+          <tr><td>Language Studio: Sentiment and opinion mining tryout</td><td>—</td><td>abr/2024</td><td>—</td></tr>
+          <tr><td title="Título original: TRILHA DO FUTURO: Dominando o ChatGPT para Turbinar sua Produtividade">Trilha do Futuro: uso de ChatGPT para mejorar la productividad</td><td>Centro Universitário UniFatecie</td><td>mar/2024</td><td>ChatGPT · RA 37110</td></tr>
+          <tr><td title="Título original: Fundamentos do Serviço Azure OpenAI">Fundamentos del servicio Azure OpenAI</td><td>DIO</td><td>mar/2024</td><td><span class="cred">CD0OVY5F</span> · Azure ML</td></tr>
+          <tr><td title="Título original: Inteligência de Documentos de IA do AZURE">Inteligencia documental con Azure AI</td><td>DIO</td><td>mar/2024</td><td><span class="cred">UYJQAGQF</span> · machine Learning, Azure ML</td></tr>
+          <tr><td title="Título original: Módulo 4 - Participando da sua primeira entrevista internacional">Módulo 4: la primera entrevista internacional</td><td>DIO</td><td>mar/2024</td><td><span class="cred">KON3XRMO</span> · Inglés como segunda lengua, inglés para los negocios +2</td></tr>
+          <tr><td title="Título original: Conceitos de Processamento de Linguagem Natural">Conceptos de procesamiento del lenguaje natural</td><td>DIO</td><td>mar/2024</td><td><span class="cred">LLW98FKN</span> · Aprendizaje automático, ML</td></tr>
+          <tr><td title="Título original: Reconhecimento Facial e transformação de imagens em Dados no Azure ML">Reconocimiento facial y transformación de imágenes en datos con Azure ML</td><td>DIO</td><td>feb/2024</td><td><span class="cred">KLKCYFUW</span> · Análisis de datos, Azure ML</td></tr>
+          <tr><td title="Título original: Módulo 3 - Desenvolvendo a Sua Rede de Contatos Profissionais">Módulo 3: desarrollo de una red de contactos profesionales</td><td>DIO</td><td>feb/2024</td><td><span class="cred">M8YJDMFB</span> · Inglés</td></tr>
+          <tr><td title="Título original: Fundamentos do Aprendizado de Máquina">Fundamentos del aprendizaje automático</td><td>DIO</td><td>feb/2024</td><td><span class="cred">JBPBRJD6</span> · Azure ML</td></tr>
+          <tr><td title="Título original: Contribuindo em um Projeto Open Source no GitHub">Colaboración en un proyecto de código abierto en GitHub</td><td>DIO</td><td>ene/2024</td><td><span class="cred">63BFAEF2</span> · Azure ML, GitHub +2</td></tr>
+          <tr><td title="Título original: Conceitos Fundamentais de IA">Conceptos fundamentales de IA</td><td>DIO</td><td>ene/2024</td><td><span class="cred">95DF1C36</span> · Computación en la nube, C# +1</td></tr>
+          <tr><td title="Título original: SQL Server - Dominando Tabelas e Tipos de Dados">SQL Server: tablas y tipos de datos</td><td>DIO</td><td>ene/2024</td><td><span class="cred">13CC3D7E</span> · SQL Server Management Studio, SQL</td></tr>
+          <tr><td title="Título original: Módulo 1 - Preparando-se Para Uma Oportunidade Internacional">Módulo 1: preparación para una oportunidad internacional</td><td>DIO</td><td>ene/2024</td><td><span class="cred">B0CB286A</span> · Inglés</td></tr>
+          <tr><td title="Título original: Módulo 2 - Conhecendo Empresas E Oportunidades Internacionais">Módulo 2: empresas y oportunidades internacionales</td><td>DIO</td><td>ene/2024</td><td><span class="cred">3B87AB80</span> · Inglés</td></tr>
+          <tr><td title="Título original: Introdução Banco de Dados">Introducción a las bases de datos</td><td>DIO</td><td>ene/2024</td><td><span class="cred">7E590F00</span> · Bases de datos, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Programação Orientada a Objetos com C#">Programación orientada a objetos con C#</td><td>DIO</td><td>ene/2024</td><td><span class="cred">58FEDE2F</span> · Informática, C# +1</td></tr>
+          <tr><td>Decola Tech 2024</td><td>DIO</td><td>ene/2024</td><td><span class="cred">ED67A934</span> · Programa intensivo, informática +1</td></tr>
+          <tr><td title="Título original: Orientação a Objetos com C#">Orientación a objetos con C#</td><td>DIO</td><td>ene/2024</td><td><span class="cred">BE5B9D2D</span> · C#, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Implementando Validações de Testes Unitários com C#">Implementación de validaciones en pruebas unitarias con C#</td><td>DIO</td><td>ene/2024</td><td><span class="cred">B0D86E7B</span> · Pruebas unitarias +1</td></tr>
+          <tr><td title="Título original: Testes Unitários com C#">Pruebas unitarias con C#</td><td>DIO</td><td>ene/2024</td><td><span class="cred">B357FA62</span> · Pruebas unitarias, Unix +2</td></tr>
+          <tr><td title="Título original: Testes Unitários com C#">Pruebas unitarias con C#</td><td>DIO</td><td>ene/2024</td><td><span class="cred">8357FA62</span> · Informática, desarrollo de sistemas +1</td></tr>
+          <tr><td title="Título original: Praticando Orientação a Objetos Com Desafios de Código em C#">Práctica de orientación a objetos con desafíos de código en C#</td><td>DIO</td><td>ene/2024</td><td><span class="cred">61B01AEF</span> · C#, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Classes Abstratas e Interfaces com C#">Clases abstractas e interfaces con C#</td><td>DIO</td><td>ene/2024</td><td><span class="cred">E79FAEB0</span> · Informática, C# +1</td></tr>
+          <tr><td title="Título original: Herança e Polimorfismo com C#">Herencia y polimorfismo con C#</td><td>DIO</td><td>ene/2024</td><td><span class="cred">1A9F5D12</span> · Informática, gestión de proyectos +1</td></tr>
+          <tr><td title="Título original: Conhecendo o Processo de Mobilidade Global: da Imigração ao Aluguel">Movilidad internacional: de los trámites migratorios al alquiler</td><td>DIO</td><td>ene/2024</td><td><span class="cred">C94FA5E3</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Introdução, Abstração e Encapsulamento com C#">Introducción, abstracción y encapsulamiento con C#</td><td>DIO</td><td>ene/2024</td><td><span class="cred">088A362B</span> · Informática, C# y capacitación +1</td></tr>
+          <tr><td title="Título original: Criando um Sistema e Abstraindo um Celular com POO em C#">Creación de un sistema y modelado de un celular con POO en C#</td><td>DIO</td><td>ene/2024</td><td><span class="cred">EB721A6E</span> · Gestión de proyectos, informática +1</td></tr>
+        </tbody>
+      </table>
+    </details>
+
+    <details>
+      <summary>📅 2023 · DIO · Alura · Ada · Anhanguera</summary>
+      <table>
+        <thead><tr><th>Certificado</th><th>Institución</th><th>Fecha</th><th>Credencial y competencias</th></tr></thead>
+        <tbody>
+          <tr><td title="Título original: Convenções C# Com Desafios de Código">Convenciones de C# y desafíos de código</td><td>DIO</td><td>dic/2023</td><td><span class="cred">C756E6EC</span> · C#, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Explorando a linguagem C#">Exploración del lenguaje C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">5B341A1D</span> · C#, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Construindo um Sistema de Hospedagem de um Hotel no C#">Desarrollo de un sistema de gestión hotelera en C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">6FEC7C45</span> · Informática, C# +1</td></tr>
+          <tr><td title="Título original: Stack, Heap e Garbage Collector no C#">Pila, montículo y recolector de basura en C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">75F26E1E</span> · C#, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional">Desafíos de código: lógica y pensamiento computacional</td><td>DIO</td><td>dic/2023</td><td><span class="cred">51C7ACDC</span> · Programación lógica, informática +1</td></tr>
+          <tr><td title="Título original: Tipos Especiais no C#">Tipos especiales de C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">78B941D3</span> · C#, desarrollo de sistemas</td></tr>
+          <tr><td>Pottencial Dev Week</td><td>DIO</td><td>dic/2023</td><td><span class="cred">7833C704</span> · Coaching, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Nuget, Serializar e Atributos no C#">NuGet, serialización y atributos en C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">84E3A156</span> · C#, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Materiais complementares: Explorando a Linguagem C#">Materiales complementarios: exploración del lenguaje C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">599C30D0</span> · C#, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Tuplas, Operador Ternário e Desconstrução de um Objeto com C#">Tuplas, operador ternario y deconstrucción de objetos en C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">A32F0F4B</span> · C#, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Dominando a Linguagem de Programação C#">Dominio del lenguaje de programación C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">011ED6A2</span> · C#, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Primeiros Passos na Linguagem de Programação C#">Primeros pasos con el lenguaje de programación C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">068D0924</span> · C#, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Exceções e Coleções com C#">Excepciones y colecciones en C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">C22C6AA0</span> · C#, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Aceleração Internacional - Scaling Trending Topics with Spring and AWS">Programa internacional: escalado de temas de tendencia con Spring y AWS</td><td>DIO</td><td>dic/2023</td><td><span class="cred">0EF8E6BC</span> · AWS CloudFormation, inglés +1</td></tr>
+          <tr><td>Observability with AWS CloudWatch and AWS Systems Manager</td><td>DIO</td><td>dic/2023</td><td><span class="cred">F438BC1E</span> · AWS CloudFormation, inglés +1</td></tr>
+          <tr><td title="Título original: Aceleração Internacional - Scaling Trending Topics with Spring and AWS">Programa internacional: escalado de temas de tendencia con Spring y AWS</td><td>DIO</td><td>dic/2023</td><td><span class="cred">AB6C6994</span> · AWS, desarrollo de sistemas</td></tr>
+          <tr><td>Developing the Solution Using Spring Boot and AWS Services</td><td>DIO</td><td>dic/2023</td><td><span class="cred">20F92623</span> · Computación en la nube +2</td></tr>
+          <tr><td>Designing a Solution for Identifying Trending Topics</td><td>DIO</td><td>dic/2023</td><td><span class="cred">9813A15A</span> · Computación en la nube +1</td></tr>
+          <tr><td title="Título original: Introdução à Programação e Pensamento Computacional">Introducción a la programación y al pensamiento computacional</td><td>DIO</td><td>dic/2023</td><td><span class="cred">FE310D57</span> · Lógica programable, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Maiores Eventos Internacionais para Aumentar seu Networking">Eventos internacionales para ampliar la red de contactos</td><td>DIO</td><td>dic/2023</td><td><span class="cred">397553FE</span> · Coaching, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Aula Inaugural - Decola Tech 2024">Clase inaugural de Decola Tech 2024</td><td>DIO</td><td>dic/2023</td><td><span class="cred">71AE1C92</span> · Programa intensivo, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Manipulando Valores com C#">Manipulación de valores con C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">6499AE72</span> · C#, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Propriedades, Métodos e Construtores com C#">Propiedades, métodos y constructores en C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">B93106A2</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Fundamentos .NET">Fundamentos de .NET</td><td>DIO</td><td>dic/2023</td><td><span class="cred">87DD8427</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Materiais Complementares: Fundamentos de .NET">Materiales complementarios: fundamentos de .NET</td><td>DIO</td><td>dic/2023</td><td><span class="cred">D4A6214F</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Construindo um Sistema para um Estacionamento com C#">Desarrollo de un sistema de estacionamiento con C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">E6F4ECD6</span> · Desarrollo de software, informática +1</td></tr>
+          <tr><td title="Título original: Comentários e Boas Práticas em C#">Comentarios y buenas prácticas en C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">AA1393FB</span> · Gestión de proyectos, informática +1</td></tr>
+          <tr><td title="Título original: Array e Listas em C#">Arreglos y listas en C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">E1F09F74</span> · Análisis de datos, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Conhecendo a Organização de um Programa C#">Estructura de un programa en C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">00DCEF27</span> · Desarrollo de software, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: A importância do Networking em uma carreira global">La importancia de las redes de contactos en una carrera internacional</td><td>DIO</td><td>dic/2023</td><td><span class="cred">8A981C06</span> · Comunicación, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Conhecendo as Estruturas de Repetição em C#">Estructuras de repetición en C#</td><td>DIO</td><td>dic/2023</td><td><span class="cred">6E2B299D</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Operadores Aritméticos em C#">Operadores aritméticos en C#</td><td>DIO</td><td>nov/2023</td><td><span class="cred">E9F8E378</span> · Desarrollo de software, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Tipos de Operadores em C#">Tipos de operadores en C#</td><td>DIO</td><td>nov/2023</td><td><span class="cred">6E2F33F0</span> · Análisis, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Sintaxe e Tipos de Dados em C#">Sintaxis y tipos de datos en C#</td><td>DIO</td><td>nov/2023</td><td><span class="cred">4110FCC2</span> · Análisis de datos, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Introdução as IDEs e Configuração de Ambiente .NET">Introducción a los IDE y configuración del entorno .NET</td><td>DIO</td><td>nov/2023</td><td><span class="cred">4B6B4E7D</span> · Análisis de datos, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Introdução ao .NET">Introducción a .NET</td><td>DIO</td><td>nov/2023</td><td><span class="cred">E88123F3</span> · Desarrollo de software, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Hackeando Vagas no LinkedIn | Analisando empresas e oportunidades no Exterior">Búsqueda de empleo en LinkedIn: análisis de empresas y oportunidades en el exterior</td><td>DIO</td><td>nov/2023</td><td><span class="cred">BBA7DCB8</span> · Coaching, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Cidadania Italiana: Desbloqueando Oportunidades para sua Carreira Internacional">Ciudadanía italiana: oportunidades para una carrera internacional</td><td>DIO</td><td>nov/2023</td><td><span class="cred">BB3C9C46</span> · Adaptación, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: C#: criando sua primeira aplicação">C#: creación de una primera aplicación</td><td>Alura</td><td>nov/2023</td><td><span class="cred">8edb7c50-5376-439d-93dd-0dc247ddac84</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Azure Cloud: segurança e recursos avançados">Azure Cloud: seguridad y recursos avanzados</td><td>Alura</td><td>nov/2023</td><td><span class="cred">b7f0bc99-d38c-4ee1-abdb-51acf5f36202</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Azure Cloud: criando um servidor com banco de dados para receber uma aplicação">Azure Cloud: creación de un servidor con base de datos para alojar una aplicación</td><td>Alura</td><td>nov/2023</td><td><span class="cred">c1f16734-5d25-442f-a9b5-2bc755076d85</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Desafios de Projetos: Crie Um Portfólio Vencedor">Desafíos de proyectos: preparación de un portafolio profesional</td><td>DIO</td><td>oct/2023</td><td><span class="cred">F265F427</span> · Gestión de portafolios, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: SQL com Oracle Database: manipule e consulte dados">SQL con Oracle Database: manejo y consulta de datos</td><td>Alura</td><td>oct/2023</td><td><span class="cred">8eb9468a-d030-4028-b2c3-6a65bec336a1</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Versionamento de Código com Git e GitHub">Control de versiones con Git y GitHub</td><td>DIO</td><td>sept/2023</td><td><span class="cred">90F4FA2A</span> · GitHub, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Organizando seus Estudos com os Roadmaps DIO e o Notion">Organización del estudio con las rutas de aprendizaje de DIO y Notion</td><td>DIO</td><td>ago/2023</td><td><span class="cred">C8CF2ECE</span> · Programa intensivo, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Prepare-se Para a Jornada (Onboarding)">Preparación para el inicio del programa</td><td>DIO</td><td>ago/2023</td><td><span class="cred">DDEEDA5</span> · Programa intensivo, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Aula Inaugural - Santander Bootcamps 2023">Clase inaugural de Santander Bootcamps 2023</td><td>DIO</td><td>ago/2023</td><td><span class="cred">8A30256D</span> · Programa intensivo, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Bootcamps DIO: Educação Gratuita e Empregabilidade Juntas!">Bootcamps DIO: educación gratuita y acceso al empleo</td><td>DIO</td><td>ago/2023</td><td><span class="cred">466C3237</span> · Programa intensivo, gestión de proyectos y desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Formação Java e Spring Boot">Formación en Java y Spring Boot</td><td>Alura</td><td>abr/2023</td><td><span class="cred">fa5752d4-af65-48dd-9407-e5d3f643c3fd</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Formação Integre aplicações Java com Banco de dados">Formación: integración de aplicaciones Java con bases de datos</td><td>Alura</td><td>abr/2023</td><td><span class="cred">22aadd99-3a59-42c4-aa7a-33d24b7b4784</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Formação Java Web: crie aplicações com Servlets e MVC">Formación en Java Web: aplicaciones con servlets y MVC</td><td>Alura</td><td>abr/2023</td><td><span class="cred">29d16905-260c-4d7c-adbd-50f058429517</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Spring Boot 3: documente, teste e prepare uma API para o deploy">Spring Boot 3: documentación, pruebas y preparación de una API para su despliegue</td><td>Alura</td><td>abr/2023</td><td><span class="cred">ba1f4821-8be2-47c3-86be-4ebf74757efd</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Spring Boot 3: desenvolva uma API Rest em Java">Spring Boot 3: desarrollo de una API REST en Java</td><td>Alura</td><td>abr/2023</td><td><span class="cred">c1379ebe-d89b-48d1-a768-00b20687b8bc</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Spring Boot 3: aplique boas práticas e proteja uma API Rest">Spring Boot 3: buenas prácticas y seguridad de una API REST</td><td>Alura</td><td>abr/2023</td><td><span class="cred">593ba40f-7ae8-4c16-8c2b-e7849a3e4150</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Persistência com JPA: Hibernate">Persistencia con JPA: Hibernate</td><td>Alura</td><td>abr/2023</td><td><span class="cred">64e8437e-7607-4ec4-99ed-a09c6773c5c5</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Java: trabalhando com listas e coleções de dados">Java: trabajo con listas y colecciones de datos</td><td>Alura</td><td>abr/2023</td><td><span class="cred">76d2c6e8-178e-4d2c-b051-2a6e0e2df023</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Java: criando a sua primeira aplicação">Java: creación de una primera aplicación</td><td>Alura</td><td>abr/2023</td><td><span class="cred">c64e5a67-0ef9-4977-8639-bf9b21e815c3</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Java: consumindo API, gravando arquivos e lidando com erros">Java: consumo de una API, escritura de archivos y manejo de errores</td><td>Alura</td><td>abr/2023</td><td><span class="cred">a76fe89c-6f91-4ccd-bf95-cdc05e7b6df9</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Java Servlet: programação web Java">Java Servlet: programación web con Java</td><td>Alura</td><td>abr/2023</td><td><span class="cred">78e245db-fc27-4027-859e-2c9e69e5bfbc</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Java Servlet: autenticação, autorização e o padrão MVC">Java Servlet: autenticación, autorización y patrón MVC</td><td>Alura</td><td>abr/2023</td><td><span class="cred">6f9d7917-7ca5-49f1-9126-8310d34e75e8</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Java e JDBC: trabalhando com um banco de dados">Java y JDBC: trabajo con una base de datos</td><td>Alura</td><td>abr/2023</td><td><span class="cred">58ff39e9-c15a-4bbb-8ed3-aeb5c97ba3f5</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: HTTP: entendendo a web por baixo dos panos">HTTP: cómo funciona la web por dentro</td><td>Alura</td><td>abr/2023</td><td><span class="cred">7ee79b0b-b942-4419-b5d6-e3028d41e8e8</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Formação Aprenda Java com Orientação a Objetos">Formación en Java con orientación a objetos</td><td>Alura</td><td>abr/2023</td><td><span class="cred">04b3d5c9-929a-48fe-bf91-89fa4591765d</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Java Polimorfismo: entenda herança e interfaces">Polimorfismo en Java: herencia e interfaces</td><td>Alura</td><td>abr/2023</td><td><span class="cred">76c45d2c-81f1-4da7-a1b1-3c36322566e4</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Git e Github: controle e compartilhe seu código">Git y GitHub: control de versiones y colaboración</td><td>Alura</td><td>mar/2023</td><td><span class="cred">df66096a-082d-44c8-bee6-3d35dabb604a</span> · Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: JavaScript e HTML: pratique lógica com desenhos, animações e um jogo">JavaScript y HTML: lógica con dibujos, animaciones y un juego</td><td>Alura</td><td>feb/2023</td><td><span class="cred">0035d9b6-2fce-4759-9ce0-d1f401a46158</span> · Desarrollo de sistemas</td></tr>
+        </tbody>
+      </table>
+    </details>
+
+    <details>
+      <summary>📅 2022 · Ada · Alura · Anhanguera · LinkedIn</summary>
+      <table>
+        <thead><tr><th>Certificado</th><th>Institución</th><th>Fecha</th><th>Credencial y competencias</th></tr></thead>
+        <tbody>
+          <tr><td title="Título original: Lógica Pura - 10 aulas | 188 min">Lógica pura: 10 clases, 188 minutos</td><td>Ada</td><td>dic/2022</td><td>Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Python - 12 aulas | 163 min">Python: 12 clases, 163 minutos</td><td>Ada</td><td>dic/2022</td><td>Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Estatística - 10 aulas | 336 min">Estadística: 10 clases, 336 minutos</td><td>Ada</td><td>dic/2022</td><td>Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Cálculo Básico - 10 aulas | 227 min">Cálculo básico: 10 clases, 227 minutos</td><td>Ada</td><td>dic/2022</td><td>Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Java - 9 aulas | 141 min">Java: 9 clases, 141 minutos</td><td>Ada</td><td>dic/2022</td><td>Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Algoritmos - 10 aulas | 92 min">Algoritmos: 10 clases, 92 minutos</td><td>Ada</td><td>dic/2022</td><td>Desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: ANÁLISE DE DADOS COM PYTHON - 40 HORAS">Análisis de datos con Python (40 horas)</td><td>Anhanguera Educacional</td><td>dic/2022</td><td><span class="cred">tklzjqKk2SMxOBLV2ENIZkp1eNSHq/vT+3JXkMFVtZ4=</span></td></tr>
+          <tr><td title="Título original: ARGUMENTAÇÃO E ANÁLISE DE DISCURSO - 120 HORAS">Argumentación y análisis del discurso (120 horas)</td><td>Anhanguera Educacional</td><td>dic/2022</td><td><span class="cred">tklzjqKk2SMxOBLV2ENIZma4ich84thAScm8p3lPv3Y=</span></td></tr>
+          <tr><td title="Título original: Java OO: entendendo a Orientação a Objetos">Java OO: introducción a la orientación a objetos</td><td>Alura</td><td>dic/2022</td><td><span class="cred">b5e9c866-58d0-416a-b01f-e1d98b381340</span> · Desarrollo de sistemas</td></tr>
+          <tr><td>Advanced SQL for Data Science: Time Series</td><td>LinkedIn</td><td>dic/2022</td><td>Liderazgo, desarrollo de sistemas</td></tr>
+          <tr><td>Advanced SQL for Query Tuning and Performance Optimization</td><td>LinkedIn</td><td>dic/2022</td><td>Liderazgo, desarrollo de sistemas</td></tr>
+          <tr><td>Master SQL for Data Science</td><td>LinkedIn</td><td>dic/2022</td><td>Desarrollo de bases de datos, liderazgo +1</td></tr>
+          <tr><td>Advanced SQL for Data Scientists</td><td>LinkedIn</td><td>dic/2022</td><td>Liderazgo, desarrollo de sistemas</td></tr>
+          <tr><td>SQL: Data Reporting and Analysis</td><td>LinkedIn</td><td>dic/2022</td><td>Liderazgo, análisis de datos +2</td></tr>
+          <tr><td title="Título original: Fundamentos da Programação">Fundamentos de la programación</td><td>LinkedIn</td><td>dic/2022</td><td>Desarrollo de software, liderazgo +1</td></tr>
+          <tr><td>C++ Essential Training</td><td>LinkedIn</td><td>dic/2022</td><td>Liderazgo, desarrollo de sistemas</td></tr>
+          <tr><td>Learning Java</td><td>LinkedIn</td><td>dic/2022</td><td>Liderazgo, Java +1</td></tr>
+          <tr><td title="Título original: Javascript e HTML: desenvolva um jogo e pratique lógica de programação">JavaScript y HTML: desarrollo de un juego para practicar lógica de programación</td><td>Alura</td><td>dic/2022</td><td><span class="cred">912bdd32-3aaa-415a-8406-105e6ab3ab31</span> · Liderazgo, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Java JRE e JDK: compile e execute o seu programa">Java JRE y JDK: compilación y ejecución de programas</td><td>Alura</td><td>nov/2022</td><td><span class="cred">3f6d3d18-abfb-4b7b-8386-209b3558798a</span> · Liderazgo, desarrollo de sistemas</td></tr>
+          <tr><td title="Título original: Certificação PMI-ACP: conheça a Cultura Ágil e seu potencial de aplicação">Certificación PMI-ACP: la cultura ágil y sus aplicaciones</td><td>Alura</td><td>nov/2022</td><td><span class="cred">4ef1685a-049f-4be6-9efd-72bbb47e3945</span> · Liderazgo y desarrollo de sistemas</td></tr>
+        </tbody>
+      </table>
+    </details>
+
+    <p class="center small muted" style="margin-top:14px">Fuente: LinkedIn — <a href="https://www.linkedin.com/in/davinunesdasilva/details/certifications/">linkedin.com/in/davinunesdasilva</a> · <b>Más de 140 cursos de extensión</b> en desarrollo web, IA, computación en la nube, datos, seguridad y diseño.</p>
+  </div>
+
+  <!-- ===== IDIOMAS ===== -->
+  <div class="section">
+    <h2>🌍 Idiomas</h2>
+    <div class="center badge-row">
+      <img src="https://img.shields.io/badge/🇧🇷_Portugués-Nativo-16a34a?style=for-the-badge" alt="Portugués: nativo"/>
+      <img src="https://img.shields.io/badge/🇺🇸_Inglés-Fluido-2563eb?style=for-the-badge" alt="Inglés: fluido"/>
+      <img src="https://img.shields.io/badge/🇮🇹_Italiano-Fluido-7c3aed?style=for-the-badge" alt="Italiano: fluido"/>
+      <img src="https://img.shields.io/badge/Español-Profesional-dc2626?style=for-the-badge" alt="Español: nivel profesional"/>
+      <img src="https://img.shields.io/badge/🇫🇷_Francés-Intermedio-0891b2?style=for-the-badge" alt="Francés: intermedio"/>
+    </div>
+  </div>
+
+  <!-- ===== DOMÍNIOS ===== -->
+  <div class="section">
+    <h2>🌐 Áreas de trabajo</h2>
+    <div class="center badge-row">
+      <img src="https://img.shields.io/badge/🎓_EdTech-2563eb?style=for-the-badge" alt="EdTech"/>
+      <img src="https://img.shields.io/badge/🌾_AgroTech-16a34a?style=for-the-badge" alt="AgroTech"/>
+      <img src="https://img.shields.io/badge/📊_Análisis_de_datos-ea580c?style=for-the-badge" alt="Análisis de datos"/>
+      <img src="https://img.shields.io/badge/🤖_Inteligencia_artificial-7c3aed?style=for-the-badge" alt="Inteligencia artificial"/>
+      <img src="https://img.shields.io/badge/🏫_Educación_pública-dc2626?style=for-the-badge" alt="Educación pública"/>
+      <img src="https://img.shields.io/badge/🤖_Robótica-0891b2?style=for-the-badge" alt="Robótica"/>
+    </div>
+  </div>
+
+  <!-- ===== GITHUB STATS ===== -->
+  <div class="section">
+    <h2>📈 Estadísticas de GitHub</h2>
+    <div class="center">
+      <img width="49%" src="https://github-readme-stats.vercel.app/api?username=dansfisica85&show_icons=true&theme=default&hide_border=true&bg_color=ffffff&title_color=2563eb&icon_color=7c3aed&text_color=334155&ring_color=2563eb&amp;locale=es" alt="Estadísticas de GitHub"/>
+      <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=dansfisica85&theme=default&hide_border=true&background=ffffff&ring=2563eb&fire=7c3aed&currStreakLabel=2563eb&sideLabels=334155&dates=64748b&amp;locale=es" alt="Racha de contribuciones en GitHub"/>
+    </div>
+    <div class="center" style="margin-top:14px">
+      <img width="55%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=dansfisica85&layout=compact&theme=default&hide_border=true&bg_color=ffffff&title_color=2563eb&text_color=334155&langs_count=10&amp;locale=es" alt="Lenguajes más utilizados"/>
+    </div>
+    <div class="center" style="margin-top:14px">
+      <img src="https://github-readme-activity-graph.vercel.app/graph?username=dansfisica85&theme=github-light&hide_border=true&bg_color=ffffff&color=2563eb&line=7c3aed&point=16a34a&area=true&area_color=c7d2fe" alt="Gráfico de actividad en GitHub" width="98%"/>
+    </div>
+    <div class="center" style="margin-top:18px">
+      <img src="https://github-profile-trophy.vercel.app/?username=dansfisica85&theme=flat&no-frame=true&no-bg=true&margin-w=6&column=7" alt="Trofeos de GitHub"/>
+    </div>
+  </div>
+
+  <!-- ===== CONTATO ===== -->
+  <div class="section" id="contato">
+    <h2>📬 Contacto</h2>
+    <div class="center badge-row">
+      <a href="https://www.linkedin.com/in/davinunesdasilva">
+        <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+      </a>
+      <a href="mailto:professordavi85@gmail.com">
+        <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
+      </a>
+      <a href="https://github.com/dansfisica85">
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+      </a>
+    </div>
+    <p class="center small muted" style="margin-top:14px">
+      📧 professordavi85@gmail.com · 🔗 linkedin.com/in/davinunesdasilva · 💻 github.com/dansfisica85 · 📍 Sertãozinho - SP, Brasil
+    </p>
+  </div>
+
+  <div class="center snake-anim" style="margin:26px 0">
+    <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg" alt="Animación de la cuadrícula de contribuciones" width="100%" style="border-radius:12px"/>
+  </div>
+
+  <div class="center">
+    <img class="banner-img" width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:c026d3,25:9333ea,50:7c3aed,75:4f46e5,100:2563eb&height=120&section=footer" alt=""/>
+    <p class="footer-note">⚡ «Cuando las ideas tienen un propósito, transforman realidades». ⚡</p>
+  </div>
+
+</div>
+<script src="/assets/animations.js" defer></script>
+</body>
+</html>

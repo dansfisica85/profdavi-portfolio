@@ -118,10 +118,15 @@
     .banner-img{box-shadow:none;}
   }
 </style>
+<link rel="alternate" hreflang="pt-BR" href="https://profdavi-curriculo.vercel.app/">
+<link rel="alternate" hreflang="es-PY" href="https://profdavi-curriculo.vercel.app/es-py/">
+<link rel="alternate" hreflang="x-default" href="https://profdavi-curriculo.vercel.app/">
+<link rel="stylesheet" href="/assets/idiomas.css">
+<link rel="canonical" href="https://profdavi-curriculo.vercel.app/">
 </head>
 <body>
 
-<nav class="navbar">
+<nav class="navbar" aria-label="Navegação principal">
   <div class="nav-inner">
     <span class="nav-brand">💻 Davi A. N. da Silva</span>
     <div class="nav-links">
@@ -134,7 +139,11 @@
       <a href="#certificados">Certificados</a>
       <a href="#contato">Contato</a>
     </div>
-    <button class="btn-print" onclick="window.print()">🖨️ Imprimir / PDF</button>
+    <div class="locale-switch" role="group" aria-label="Idioma do site">
+      <a lang="pt-BR" hreflang="pt-BR" href="/" aria-current="page">Português</a>
+      <a lang="es-PY" hreflang="es-PY" href="/es-py/" title="Español de Paraguay">Español (PY)</a>
+    </div>
+    <button type="button" class="btn-print" onclick="window.print()" aria-label="Imprimir esta página"><span aria-hidden="true">🖨️</span><span class="print-label">Imprimir / PDF</span></button>
   </div>
 </nav>
 
